@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="mythsnlegends" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output=".\mythsnlegends" prefix_auto="1" extension_auto="1" />
+				<Option object_output="debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-include util.h" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output=".\mythsnlegends" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:\code\SDL-1.2.15\include" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDLmain" />
+			<Add library="SDL.dll" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="C:\code\SDL-1.2.15\lib" />
+		</Linker>
+		<Unit filename="cb.bmp" />
+		<Unit filename="char_hero.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="char_hero.h" />
+		<Unit filename="char_stat.h" />
+		<Unit filename="gfx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gfx.h" />
+		<Unit filename="gfx_event_loop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gfx_event_loop.h" />
+		<Unit filename="gfx_text.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gfx_text.h" />
+		<Unit filename="gfx_tile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gfx_tile.h" />
+		<Unit filename="gfx_window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gfx_window.h" />
+		<Unit filename="item.h" />
+		<Unit filename="item_inv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="item_inv.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="map_block.h" />
+		<Unit filename="mythsnlegends.cbp" />
+		<Unit filename="toolkit_monster_edit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="toolkit_monster_edit.h" />
+		<Unit filename="util.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

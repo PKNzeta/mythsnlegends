@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="gfx.c" open="1" top="0" tabpos="3">
+		<Cursor position="698" topLine="32" />
+	</File>
+	<File name="gfx.h" open="1" top="0" tabpos="2">
+		<Cursor position="908" topLine="23" />
+	</File>
+	<File name="gfx_event_loop.c" open="1" top="0" tabpos="4">
+		<Cursor position="1747" topLine="64" />
+	</File>
+	<File name="gfx_event_loop.h" open="1" top="0" tabpos="6">
+		<Cursor position="17" topLine="0" />
+	</File>
+	<File name="gfx_window.c" open="1" top="0" tabpos="5">
+		<Cursor position="3678" topLine="145" />
+	</File>
+	<File name="gfx_window.h" open="1" top="0" tabpos="7">
+		<Cursor position="849" topLine="11" />
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="1">
+		<Cursor position="219" topLine="0" />
+	</File>
+	<File name="map_block.h" open="1" top="1" tabpos="9">
+		<Cursor position="123" topLine="0" />
+	</File>
+	<File name="toolkit_monster_edit.c" open="1" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
