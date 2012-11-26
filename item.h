@@ -15,7 +15,9 @@ typedef enum
     WAND,
     FOOD,
     RING,
-    GAUNTLET
+    GAUNTLET,
+    OTHER,
+    ITEM_TYPE_NUM
 } ITEM_TYPE;
 
 typedef struct item_struct
@@ -62,6 +64,13 @@ typedef struct item_struct
     ///* gauntlet attibutes */
     //ITEM_GAUNTLET_TYPE* gauntlet;
 
+    ///* other random attributes */
+    //ITEM_OTHER_ATTRIBUTES* other */
+
+    /* Items can be stacked, this point to the previous
+     * and the next item in the stack */
+    struct item_struct* nxt;
+    struct item_struct* prv;
 } ITEM;
 
 #include "item_inv.h"

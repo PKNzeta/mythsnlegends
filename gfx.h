@@ -1,8 +1,3 @@
-/* gfx.h
- * Wrote by <F Cardascia> <PKNzeta>
- * All rights reserved to original author
- * This file is part of v0lt, a graphical noise box */
-
 #ifndef H_GFX
 #define H_GFX
 

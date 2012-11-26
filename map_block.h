@@ -6,7 +6,8 @@
 typedef struct map_block
 {
     int walkable[9];
-    int tile;
+    int tile_num;
+    int tile_variation;
     ITEM_INV contain;
 } MAP_BLOCK;
 

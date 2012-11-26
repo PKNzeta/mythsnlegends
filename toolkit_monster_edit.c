@@ -1,4 +1,3 @@
-
 #include "gfx.h"
 
 static void monster_editor_draw_window (void)

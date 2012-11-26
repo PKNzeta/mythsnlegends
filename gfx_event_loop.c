@@ -1,8 +1,3 @@
-/* gfx_events.c
- * Wrote by <F Cardascia> <PKNzeta>
- * All rights reserved to original author
- * This file is part of v0lt, a graphical noise box */
-
 #include "gfx_event_loop.h"
 #include <SDL/SDL.h>
 

@@ -1,11 +1,5 @@
-/* gfx_window.c
- * Wrote by <F Cardascia> <PKNzeta>
- * All rights reserved to original author
- * This file is part of v0lt, a graphical noise box */
-
 #include "gfx.h"
 #include "gfx_event_loop.h"
-
 
 static int fs = 0;
 
@@ -20,9 +14,9 @@ Uint8 gfx_window_init
             (GFX_WIN_RESOLUTION,
              SDL_HWSURFACE | SDL_DOUBLEBUF /*| SDL_FULLSCREEN */)))
     {
-        SDL_WM_SetCaption (PROGRAM_NAME, NULL);
-        SDL_ShowCursor (0);
         /* Icon & Window name */
+        SDL_WM_SetCaption (PROGRAM_NAME, NULL);
+        SDL_ShowCursor (1);
     }
     else
     {
