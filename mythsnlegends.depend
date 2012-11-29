@@ -21,8 +21,9 @@
 1353887836 c:\code\mythsnlegends\map_block.h
 	"item.h"
 
-1353815796 source:c:\code\mythsnlegends\gfx.c
+1354177580 source:c:\code\mythsnlegends\gfx.c
 	"gfx.h"
+	"files.h"
 
 1353884886 c:\code\mythsnlegends\gfx.h
 	<SDL/SDL.h>
@@ -253,7 +254,7 @@
 	<stdio.h>
 	"item.h"
 
-1354171428 source:c:\code\mythsnlegends\main.c
+1354178185 source:c:\code\mythsnlegends\main.c
 	<stdlib.h>
 	"gfx.h"
 	"files.h"
@@ -286,12 +287,13 @@
 1353985742 source:c:\code\mythsnlegends\char_skills.c
 	"char.h"
 
-1354173195 source:c:\code\mythsnlegends\files.c
+1354178400 source:c:\code\mythsnlegends\files.c
 	<stdlib.h>
 	<stdio.h>
+	<string.h>
 
 1353992627 source:c:\code\mythsnlegends\item_stock.c
 	"item.h"
 
-1354171386 c:\code\mythsnlegends\files.h
+1354177623 c:\code\mythsnlegends\files.h
 

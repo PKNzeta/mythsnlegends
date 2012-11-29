@@ -11,8 +11,8 @@ void main_quit (void)
 void main_init (void)
 {
     atexit (main_quit);
-    gfx_init ();
     files_add_search_path ("gfx");
+    gfx_init ();
 }
 
 int main (int argc, char** argv)

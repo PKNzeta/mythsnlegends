@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #ifdef WIN32
 
@@ -8,7 +9,7 @@
 
 static const char* base_dir[N_BASEDIR] =
 {
-    "./"
+    ".\\"
 };
 
 #else
@@ -24,6 +25,8 @@ static const char* base_dir[N_BASEDIR] =
 };
 
 #endif
+
+static char locate_buf[128] = {'\0'};
 
 
 typedef struct spath_struct
@@ -47,19 +50,53 @@ void files_add_search_path (const char* pth)
 FILE* files_open (const char* filename)
 {
     FILE*  file = NULL;
-    SPATH* cur = paths;
-    int    i = 0;
+    int i = 0;
 
-    while (cur != NULL && file == NULL)
+    while (i < N_BASEDIR && file == NULL)
     {
-        char   pth_buf[128] = {'\0'};
+        SPATH* cur = paths;
 
-        snprintf (pth_buf, 127, "%s%s" PTH_SEP "%s",
-                  base_dir[i], cur->str, filename);
-        file = fopen (pth_buf, "r");
+        while (cur != NULL && file == NULL)
+        {
+            char pth_buf[128] = {'\0'};
 
-        cur = cur->nxt; i++;
+            snprintf (pth_buf, 127, "%s%s" PTH_SEP "%s",
+                      base_dir[i], cur->str, filename);
+            file = fopen (pth_buf, "r");
+            cur = cur->nxt;
+        }
+        i++;
     }
 
     return file;
+}
+
+const char* files_locate (const char* filename)
+{
+    FILE*  file = NULL;
+    int i = 0;
+
+    while (i < N_BASEDIR && file == NULL)
+    {
+        SPATH* cur = paths;
+
+        while (cur != NULL && file == NULL)
+        {
+            char pth_buf[128] = {'\0'};
+
+            snprintf (pth_buf, 127, "%s%s" PTH_SEP "%s",
+                      base_dir[i], cur->str, filename);
+            if ((file = fopen (pth_buf, "r")) != NULL)
+            {
+                strncpy (locate_buf, (const char*) pth_buf, 127);
+                fclose (file);
+                break;
+            }
+
+            cur = cur->nxt;
+        }
+        i++;
+    }
+
+    return (file)? locate_buf : NULL;
 }

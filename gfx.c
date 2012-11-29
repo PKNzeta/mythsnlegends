@@ -1,4 +1,5 @@
 #include "gfx.h"
+#include "files.h"
 
 GFX_PROGRAM_GRAPHICS Gfx;
 
@@ -6,9 +7,9 @@ static Uint8 gfx_init__load_graphics
     (void)
 {
     Uint8 error =
-        gfx_tileset_init (&Gfx.tiles32, "tileset32.bmp", 32) +
-        gfx_tileset_init (&Gfx.tiles16, "tileset16.bmp", 16) +
-        gfx_tileset_init (&Gfx.tiles_ascii, "tileset_ascii.bmp", 8);
+     gfx_tileset_init (&Gfx.tiles32, files_locate ("tileset32.bmp"), 32) +
+     gfx_tileset_init (&Gfx.tiles16, files_locate ("tileset16.bmp"), 16) +
+     gfx_tileset_init (&Gfx.tiles_ascii, files_locate ("tileset_ascii.bmp"), 8);
 
     return (error == 3)? 1: 0;
 }
