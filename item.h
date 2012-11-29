@@ -27,7 +27,8 @@ typedef struct item_struct
 
     /* General attributes */
     int               hp;
-    int               cursed;
+    int               cursed; /* 0:Normal 1:Cursed 2:Blessed */
+    int               identified;
 
     ///* armor attributes */
     //int               a_armor;
@@ -72,6 +73,10 @@ typedef struct item_struct
     struct item_struct* nxt;
     struct item_struct* prv;
 } ITEM;
+
+/* return a pointer the a string of the item name like "a holly truc bidule +1"
+ */
+const char* item_print_name (ITEM* itm);
 
 #include "item_inv.h"
 

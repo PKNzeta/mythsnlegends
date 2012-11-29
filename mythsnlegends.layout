@@ -1,31 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+	<File name="char.h" open="1" top="0" tabpos="18">
+		<Cursor position="110" topLine="0" />
+	</File>
+	<File name="char_hero.c" open="1" top="0" tabpos="10">
+		<Cursor position="677" topLine="17" />
+	</File>
+	<File name="char_hero.h" open="1" top="0" tabpos="11">
+		<Cursor position="569" topLine="16" />
+	</File>
+	<File name="char_magics.h" open="1" top="0" tabpos="17">
+		<Cursor position="275" topLine="0" />
+	</File>
+	<File name="char_skills.c" open="1" top="0" tabpos="16">
+		<Cursor position="21" topLine="0" />
+	</File>
+	<File name="char_skills.h" open="1" top="0" tabpos="19">
+		<Cursor position="154" topLine="0" />
+	</File>
 	<File name="gfx.c" open="1" top="0" tabpos="3">
-		<Cursor position="698" topLine="32" />
+		<Cursor position="698" topLine="16" />
 	</File>
 	<File name="gfx.h" open="1" top="0" tabpos="2">
 		<Cursor position="908" topLine="23" />
 	</File>
 	<File name="gfx_event_loop.c" open="1" top="0" tabpos="4">
-		<Cursor position="1747" topLine="64" />
+		<Cursor position="1647" topLine="38" />
 	</File>
 	<File name="gfx_event_loop.h" open="1" top="0" tabpos="6">
 		<Cursor position="17" topLine="0" />
 	</File>
 	<File name="gfx_window.c" open="1" top="0" tabpos="5">
-		<Cursor position="3678" topLine="145" />
+		<Cursor position="3556" topLine="121" />
 	</File>
 	<File name="gfx_window.h" open="1" top="0" tabpos="7">
-		<Cursor position="849" topLine="11" />
+		<Cursor position="849" topLine="0" />
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="1">
-		<Cursor position="219" topLine="0" />
+	<File name="item.c" open="1" top="0" tabpos="14">
+		<Cursor position="778" topLine="9" />
 	</File>
-	<File name="map_block.h" open="1" top="1" tabpos="9">
+	<File name="item.h" open="1" top="0" tabpos="13">
+		<Cursor position="1624" topLine="59" />
+	</File>
+	<File name="item_inv.c" open="1" top="0" tabpos="12">
+		<Cursor position="1281" topLine="0" />
+	</File>
+	<File name="item_inv.h" open="1" top="0" tabpos="15">
+		<Cursor position="679" topLine="10" />
+	</File>
+	<File name="item_stock.c" open="1" top="0" tabpos="20">
+		<Cursor position="41" topLine="0" />
+	</File>
+	<File name="main.c" open="1" top="1" tabpos="1">
+		<Cursor position="242" topLine="0" />
+	</File>
+	<File name="map_block.h" open="1" top="0" tabpos="9">
 		<Cursor position="123" topLine="0" />
 	</File>
 	<File name="toolkit_monster_edit.c" open="1" top="0" tabpos="8">
-		<Cursor position="0" topLine="0" />
+		<Cursor position="1131" topLine="24" />
 	</File>
 </CodeBlocks_layout_file>

@@ -1,27 +1,30 @@
 # depslib dependency file v1.0
-1353351921 source:c:\code\mythsnlegends\char_hero.c
+1353991868 source:c:\code\mythsnlegends\char_hero.c
+	<stdlib.h>
 	<stdio.h>
-	"char_hero.h"
+	"char.h"
 
-1353775389 c:\code\mythsnlegends\char_hero.h
+1353992020 c:\code\mythsnlegends\char_hero.h
 	"item.h"
-	"char_stat.h"
+	"char_skills.h"
+	"char_magics.h"
+	"char_hero.h"
 	"map_block.h"
 
-1353776537 c:\code\mythsnlegends\item.h
+1353992323 c:\code\mythsnlegends\item.h
 	"item_inv.h"
 
-1353776581 c:\code\mythsnlegends\item_inv.h
+1353991738 c:\code\mythsnlegends\item_inv.h
 
 1353351785 c:\code\mythsnlegends\char_stat.h
 
-1353444010 c:\code\mythsnlegends\map_block.h
+1353887836 c:\code\mythsnlegends\map_block.h
 	"item.h"
 
 1353815796 source:c:\code\mythsnlegends\gfx.c
 	"gfx.h"
 
-1353815351 c:\code\mythsnlegends\gfx.h
+1353884886 c:\code\mythsnlegends\gfx.h
 	<SDL/SDL.h>
 	"gfx_event_loop.h"
 	"gfx_tile.h"
@@ -218,18 +221,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1353813151 c:\code\mythsnlegends\gfx_event_loop.h
+1353884841 c:\code\mythsnlegends\gfx_event_loop.h
 	<SDL/SDL.h>
 
 1267215236 c:\code\mythsnlegends\gfx_tile.h
 	<SDL/SDL.h>
 
-1353816069 c:\code\mythsnlegends\gfx_window.h
+1353884851 c:\code\mythsnlegends\gfx_window.h
 	<SDL/SDL.h>
 
 1294253538 c:\code\mythsnlegends\gfx_text.h
 
-1353816097 source:c:\code\mythsnlegends\gfx_event_loop.c
+1353884825 source:c:\code\mythsnlegends\gfx_event_loop.c
 	"gfx_event_loop.h"
 	<SDL/SDL.h>
 	"gfx.h"
@@ -241,27 +244,54 @@
 	"gfx.h"
 	<SDL/SDL.h>
 
-1353816558 source:c:\code\mythsnlegends\gfx_window.c
+1353884829 source:c:\code\mythsnlegends\gfx_window.c
 	"gfx.h"
 	"gfx_event_loop.h"
 
-1353776573 source:c:\code\mythsnlegends\item_inv.c
-	<stdlib.h>
-	"item.h"
-
-1353817687 source:c:\code\mythsnlegends\main.c
+1353902756 source:c:\code\mythsnlegends\item_inv.c
 	<stdlib.h>
 	<stdio.h>
+	"item.h"
+
+1354171428 source:c:\code\mythsnlegends\main.c
+	<stdlib.h>
 	"gfx.h"
-	"toolkit_monster_edit.h"
+	"files.h"
 
 1353816131 source:c:\code\mythsnlegends\monster_edit.c
 	"gfx.h"
 
 1353813533 c:\code\mythsnlegends\monster_edit.h
 
-1353816934 source:c:\code\mythsnlegends\toolkit_monster_edit.c
+1353884858 source:c:\code\mythsnlegends\toolkit_monster_edit.c
 	"gfx.h"
 
-1353813533 c:\code\mythsnlegends\toolkit_monster_edit.h
+1353813534 c:\code\mythsnlegends\toolkit_monster_edit.h
+
+1353992318 source:c:\code\mythsnlegends\item.c
+	"item.h"
+	"stdio.h"
+
+1353987744 c:\code\mythsnlegends\char.h
+	"char_hero.h"
+	"char_skills.h"
+	"char_magics.h"
+
+1353987786 c:\code\mythsnlegends\char_skills.h
+	"char.h"
+
+1353987772 c:\code\mythsnlegends\char_magics.h
+	"char.h"
+
+1353985742 source:c:\code\mythsnlegends\char_skills.c
+	"char.h"
+
+1354173195 source:c:\code\mythsnlegends\files.c
+	<stdlib.h>
+	<stdio.h>
+
+1353992627 source:c:\code\mythsnlegends\item_stock.c
+	"item.h"
+
+1354171386 c:\code\mythsnlegends\files.h
 

@@ -1,25 +1,24 @@
-
+#include <stdlib.h>
 #include <stdio.h>
-#include "char_hero.h"
+#include "char.h"
 
-HERO Hero =
+CHARACTER Hero =
 {
     /* Character name */
-    "Arthur          ",
+    "Arthur",
 
-    /* initial character status */
+    /* Initial character skills */
     {
-        /* HP & Max HP */
-        15, 15,
+        {0},  /* skill slots */
+        1,    /* Max number of learned skills */
+        15    /* Maximum HP */
+    },
 
-        /* MP & Max MP */
-        10, 10,
-
-        /* Experience */
-        0,
-
-        /* Level */
-        1,
+    /* Initial character magic attributes */
+    {
+        {0},  /* spell slots */
+        1,    /* Max number of learned spells */
+        10    /* Max MP */
     },
 
     /* the character position */
@@ -29,7 +28,13 @@ HERO Hero =
     },
 
     /* initial inventory */
-    NULL,
+    {{NULL}, {NULL}},
+
+    /* Hit points and magic points */
+    15, 10,
+
+    /* XP, and level */
+    0, 1,
 
     /* Pass your turn? */
     0,
@@ -37,23 +42,3 @@ HERO Hero =
     /* Number of turn since the player had spawn */
     0
 };
-
-/*
-void dbg_print_hero_stat (void)
-{
-    fprintf (stderr,
-             "Hero name: %s\n"
-             "HP: %d / %d\tMP: %d / %d\n"
-             "XP: %d\tLevel: %d\n"
-             "Inventory: {not implemented yet}\n"
-             "Pass? %d\n"
-             "Turn: %ld\n",
-             Hero.name,
-             Hero.stat.hp, Hero.stat.hp_max,
-             Hero.stat.mp, Hero.stat.mp_max,
-             Hero.stat.xp,
-             Hero.stat.lvl,
-             Hero.pass,
-             Hero.turn);
-}
-*/

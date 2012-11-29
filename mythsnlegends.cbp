@@ -44,11 +44,16 @@
 			<Add directory="C:\code\SDL-1.2.15\lib" />
 		</Linker>
 		<Unit filename="cb.bmp" />
+		<Unit filename="char.h" />
 		<Unit filename="char_hero.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="char_hero.h" />
-		<Unit filename="char_stat.h" />
+		<Unit filename="char_magics.h" />
+		<Unit filename="char_skills.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="char_skills.h" />
 		<Unit filename="gfx.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -69,11 +74,17 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="gfx_window.h" />
+		<Unit filename="item.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="item.h" />
 		<Unit filename="item_inv.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="item_inv.h" />
+		<Unit filename="item_stock.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

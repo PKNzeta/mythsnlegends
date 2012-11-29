@@ -2,7 +2,9 @@
 #define H__HERO
 
 #include "item.h"
-#include "char_stat.h"
+#include "char_skills.h"
+#include "char_magics.h"
+#include "char_hero.h"
 #include "map_block.h"
 
 typedef struct char_position
@@ -16,12 +18,19 @@ typedef struct char_position
 
 } CHAR_POSITION;
 
-typedef struct hero
+typedef struct charac_struct
 {
-    char          name[16];
-    CHAR_STAT     stat;
-    CHAR_POSITION pos;
-    ITEM_INV*     inv;
+    char             name[16];
+    CHAR_SKILL_SLOTS skill;
+    CHAR_MAGIC_SLOTS magic;
+    CHAR_POSITION    pos;
+    ITEM_INV         inv;
+
+    /* character current hp and mp */
+    int hp; int mp;
+
+    /* experience and level */
+    int xp; int lvl;
 
     /* pass your turn if it is set to one */
     int           pass;
@@ -29,10 +38,8 @@ typedef struct hero
     /* number of turn that the hero played */
     long          turn;
 
-} HERO;
+} CHARACTER;
 
-HERO Hero;
-
-//void dbg_print_hero_stat (void);
+CHARACTER Hero;
 
 #endif /* H__HERO */

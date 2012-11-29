@@ -1,16 +1,26 @@
 
 #include <stdlib.h>
 #include "gfx.h"
-#include "toolkit_monster_edit.h"
+#include "files.h"
+
+void main_quit (void)
+{
+    gfx_free ();
+}
+
+void main_init (void)
+{
+    atexit (main_quit);
+    gfx_init ();
+    files_add_search_path ("gfx");
+}
 
 int main (int argc, char** argv)
 {
     /* avoid compiler warnings */
     (void) argv; (void) argc;
 
-    atexit (gfx_free);
-    gfx_init ();
-    monster_editor ();
+    main_init ();
 
     return EXIT_SUCCESS;
 }
