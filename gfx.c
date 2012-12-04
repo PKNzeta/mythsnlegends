@@ -23,7 +23,7 @@ Uint8 gfx_init
     if (gfx_window_init ()
     &&  gfx_init__load_graphics ())
     {
-        //gfx_filters_init (&Gfx.filters);
+//        gfx_filters_init (&Gfx.filters);
 //        SDL_initFramerate (&Gfx.fps_manager);
 //        SDL_setFramerate (&Gfx.fps_manager, GFX_FPS);
     }

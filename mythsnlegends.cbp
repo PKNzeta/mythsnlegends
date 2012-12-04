@@ -43,62 +43,89 @@
 			<Add library="dxguid" />
 			<Add directory="C:\code\SDL-1.2.15\lib" />
 		</Linker>
-		<Unit filename="cb.bmp" />
-		<Unit filename="char.h" />
+		<Unit filename="char.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="char_hero.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="char_hero.h" />
-		<Unit filename="char_magics.h" />
+		<Unit filename="char_hero.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="char_skills.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="char_skills.h" />
+		<Unit filename="char_skills.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="char_spells.h" />
 		<Unit filename="files.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="files.h" />
+		<Unit filename="files.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="gfx.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="gfx.h" />
+		<Unit filename="gfx.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="gfx_event_loop.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="gfx_event_loop.h" />
+		<Unit filename="gfx_event_loop.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="gfx_text.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="gfx_text.h" />
+		<Unit filename="gfx_text.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="gfx_tile.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="gfx_tile.h" />
+		<Unit filename="gfx_tile.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="gfx_window.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="gfx_window.h" />
+		<Unit filename="gfx_window.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="item.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="item.h" />
+		<Unit filename="item.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="item_inv.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="item_inv.h" />
-		<Unit filename="item_stock.c">
-			<Option compilerVar="CC" />
+		<Unit filename="item_inv.h">
+			<Option target="Debug" />
 		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="map_block.h" />
-		<Unit filename="mythsnlegends.cbp" />
+		<Unit filename="map_block.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="mythsnlegends.cbp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="spells.def" />
 		<Unit filename="toolkit_monster_edit.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="toolkit_monster_edit.h" />
-		<Unit filename="util.h" />
+		<Unit filename="toolkit_monster_edit.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="util.h">
+			<Option target="Debug" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger />

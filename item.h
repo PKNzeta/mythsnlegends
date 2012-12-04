@@ -26,9 +26,9 @@ typedef struct item_struct
     ITEM_TYPE   type;
 
     /* General attributes */
-    int               hp;
-    int               cursed; /* 0:Normal 1:Cursed 2:Blessed */
-    int               identified;
+    int         hp;
+    int         cursed; /* 0:Normal 1:Cursed 2:Blessed */
+    int         identified;
 
     ///* armor attributes */
     //int               a_armor;

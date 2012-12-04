@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+
 #include "char.h"
+#include "char_hero.h"
 
 CHARACTER Hero =
 {
@@ -9,16 +11,18 @@ CHARACTER Hero =
 
     /* Initial character skills */
     {
-        {0},  /* skill slots */
-        1,    /* Max number of learned skills */
-        15    /* Maximum HP */
+        {0},    /* skill slots */
+        {NULL}, /* Skills callbacks. This has to be initiated later */
+        1,      /* Max number of learned skills */
+        15      /* Maximum HP */
     },
 
     /* Initial character magic attributes */
     {
-        {0},  /* spell slots */
-        1,    /* Max number of learned spells */
-        10    /* Max MP */
+        {0},    /* spell slots */
+        {NULL}, /* spell function */
+        1,      /* Max number of learned spells */
+        10      /* Max MP */
     },
 
     /* the character position */
@@ -37,8 +41,5 @@ CHARACTER Hero =
     0, 1,
 
     /* Pass your turn? */
-    0,
-
-    /* Number of turn since the player had spawn */
     0
 };

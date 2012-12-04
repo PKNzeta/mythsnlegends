@@ -3,14 +3,18 @@
 
 #include "char.h"
 
-typedef enum
+enum
 {
+    CHAR_SKILL_SMALL_WEAPON,
+    CHAR_SKILL_MEDIUM_WEAPON,
+    CHAR_SKILL_LARGE_WEAPON,
     N_CHAR_SKILL
-} CHAR_SKILL;
+};
 
-typedef struct char_skill_slots
+typedef struct
 {
-    CHAR_SKILL slots[32];
+    int slots[N_CHAR_SKILL];
+    void (*slots_cb[N_CHAR_SKILL]) (void*);
     int num_slot;
     int hp_max;
 

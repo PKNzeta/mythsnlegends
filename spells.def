@@ -1,0 +1,5 @@
+/* spells.def */
+X( CHAR_SPELL_CHILLING_TOUCH, char_spell_chilling_touch )
+X( CHAR_SPELL_DUMMY,          char_spell_dummy )
+
+#undef X

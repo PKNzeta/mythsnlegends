@@ -1,73 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="char.h" open="1" top="0" tabpos="18">
-		<Cursor position="110" topLine="0" />
+	<File name="char.h" open="0" top="0" tabpos="18">
+		<Cursor position="423" topLine="9" />
 	</File>
-	<File name="char_hero.c" open="1" top="0" tabpos="10">
-		<Cursor position="677" topLine="15" />
+	<File name="char_hero.c" open="0" top="0" tabpos="10">
+		<Cursor position="439" topLine="6" />
 	</File>
-	<File name="char_hero.h" open="1" top="0" tabpos="11">
-		<Cursor position="569" topLine="16" />
+	<File name="char_hero.h" open="0" top="0" tabpos="11">
+		<Cursor position="64" topLine="0" />
 	</File>
-	<File name="char_magics.h" open="1" top="0" tabpos="17">
-		<Cursor position="275" topLine="0" />
+	<File name="char_skills.c" open="0" top="0" tabpos="16">
+		<Cursor position="22" topLine="0" />
 	</File>
-	<File name="char_skills.c" open="1" top="0" tabpos="16">
-		<Cursor position="21" topLine="0" />
+	<File name="char_skills.h" open="0" top="0" tabpos="19">
+		<Cursor position="212" topLine="0" />
 	</File>
-	<File name="char_skills.h" open="1" top="0" tabpos="19">
-		<Cursor position="154" topLine="0" />
+	<File name="char_spells.h" open="0" top="0" tabpos="0">
+		<Cursor position="289" topLine="0" />
 	</File>
-	<File name="files.c" open="1" top="1" tabpos="21">
-		<Cursor position="1626" topLine="2" />
+	<File name="files.c" open="0" top="0" tabpos="21">
+		<Cursor position="11" topLine="0" />
 	</File>
-	<File name="files.h" open="1" top="0" tabpos="22">
-		<Cursor position="191" topLine="0" />
+	<File name="files.h" open="0" top="0" tabpos="22">
+		<Cursor position="191" topLine="3" />
 	</File>
-	<File name="gfx.c" open="1" top="0" tabpos="3">
-		<Cursor position="36" topLine="0" />
+	<File name="gfx.c" open="0" top="0" tabpos="3">
+		<Cursor position="1052" topLine="0" />
 	</File>
-	<File name="gfx.h" open="1" top="0" tabpos="2">
-		<Cursor position="908" topLine="23" />
+	<File name="gfx.h" open="0" top="0" tabpos="2">
+		<Cursor position="908" topLine="0" />
 	</File>
-	<File name="gfx_event_loop.c" open="1" top="0" tabpos="4">
+	<File name="gfx_event_loop.c" open="0" top="0" tabpos="4">
 		<Cursor position="1647" topLine="38" />
 	</File>
-	<File name="gfx_event_loop.h" open="1" top="0" tabpos="6">
+	<File name="gfx_event_loop.h" open="0" top="0" tabpos="6">
 		<Cursor position="17" topLine="0" />
 	</File>
-	<File name="gfx_tile.c" open="1" top="0" tabpos="23">
+	<File name="gfx_tile.c" open="0" top="0" tabpos="23">
 		<Cursor position="0" topLine="41" />
 	</File>
-	<File name="gfx_window.c" open="1" top="0" tabpos="5">
+	<File name="gfx_window.c" open="0" top="0" tabpos="5">
 		<Cursor position="3556" topLine="121" />
 	</File>
-	<File name="gfx_window.h" open="1" top="0" tabpos="7">
+	<File name="gfx_window.h" open="0" top="0" tabpos="7">
 		<Cursor position="849" topLine="0" />
 	</File>
-	<File name="item.c" open="1" top="0" tabpos="14">
+	<File name="item.c" open="0" top="0" tabpos="14">
 		<Cursor position="778" topLine="8" />
 	</File>
-	<File name="item.h" open="1" top="0" tabpos="13">
-		<Cursor position="1624" topLine="54" />
+	<File name="item.h" open="0" top="0" tabpos="13">
+		<Cursor position="427" topLine="54" />
 	</File>
-	<File name="item_inv.c" open="1" top="0" tabpos="12">
+	<File name="item_inv.c" open="0" top="0" tabpos="12">
 		<Cursor position="1281" topLine="0" />
 	</File>
-	<File name="item_inv.h" open="1" top="0" tabpos="15">
+	<File name="item_inv.h" open="0" top="0" tabpos="15">
 		<Cursor position="679" topLine="5" />
 	</File>
-	<File name="item_stock.c" open="1" top="0" tabpos="20">
-		<Cursor position="41" topLine="0" />
-	</File>
-	<File name="main.c" open="1" top="0" tabpos="1">
+	<File name="main.c" open="0" top="0" tabpos="1">
 		<Cursor position="217" topLine="0" />
 	</File>
-	<File name="map_block.h" open="1" top="0" tabpos="9">
+	<File name="map_block.h" open="0" top="0" tabpos="9">
 		<Cursor position="123" topLine="0" />
 	</File>
-	<File name="toolkit_monster_edit.c" open="1" top="0" tabpos="8">
+	<File name="spells.def" open="0" top="0" tabpos="0">
+		<Cursor position="90" topLine="0" />
+	</File>
+	<File name="toolkit_monster_edit.c" open="0" top="0" tabpos="8">
 		<Cursor position="975" topLine="22" />
+	</File>
+	<File name="util.h" open="0" top="0" tabpos="0">
+		<Cursor position="12" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

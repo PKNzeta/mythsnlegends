@@ -100,7 +100,7 @@ FILE* files_open (const char* filename)
  * filename: the filename we are looking for.
  * return: a constant string of the full path of filename or NULL if none found.
  *         take care of copying the result and not just point to it as it's
- *         subject to changes.
+ *         subject to changes when you call files_locate() again.
  */
 const char* files_locate (const char* filename)
 {
