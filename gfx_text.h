@@ -6,6 +6,6 @@
 #ifndef H_GFX_TEXT
 #define H_GFX_TEXT
 
-void gfx_text_write (const char* text, int x, int y);
+void gfx_text_write (const char* text, int x, int y, int select);
 
 #endif

@@ -25,23 +25,35 @@
 	<File name="files.h" open="0" top="0" tabpos="22">
 		<Cursor position="191" topLine="3" />
 	</File>
+	<File name="game.c" open="0" top="0" tabpos="0">
+		<Cursor position="140" topLine="0" />
+	</File>
+	<File name="game.h" open="0" top="0" tabpos="0">
+		<Cursor position="135" topLine="0" />
+	</File>
 	<File name="gfx.c" open="0" top="0" tabpos="3">
-		<Cursor position="1052" topLine="0" />
+		<Cursor position="1052" topLine="34" />
 	</File>
 	<File name="gfx.h" open="0" top="0" tabpos="2">
 		<Cursor position="908" topLine="0" />
 	</File>
 	<File name="gfx_event_loop.c" open="0" top="0" tabpos="4">
-		<Cursor position="1647" topLine="38" />
+		<Cursor position="1130" topLine="3" />
 	</File>
 	<File name="gfx_event_loop.h" open="0" top="0" tabpos="6">
 		<Cursor position="17" topLine="0" />
 	</File>
+	<File name="gfx_text.c" open="0" top="0" tabpos="0">
+		<Cursor position="359" topLine="0" />
+	</File>
+	<File name="gfx_text.h" open="0" top="0" tabpos="0">
+		<Cursor position="250" topLine="0" />
+	</File>
 	<File name="gfx_tile.c" open="0" top="0" tabpos="23">
-		<Cursor position="0" topLine="41" />
+		<Cursor position="0" topLine="12" />
 	</File>
 	<File name="gfx_window.c" open="0" top="0" tabpos="5">
-		<Cursor position="3556" topLine="121" />
+		<Cursor position="900" topLine="34" />
 	</File>
 	<File name="gfx_window.h" open="0" top="0" tabpos="7">
 		<Cursor position="849" topLine="0" />
@@ -59,16 +71,25 @@
 		<Cursor position="679" topLine="5" />
 	</File>
 	<File name="main.c" open="0" top="0" tabpos="1">
-		<Cursor position="217" topLine="0" />
+		<Cursor position="124" topLine="0" />
 	</File>
 	<File name="map_block.h" open="0" top="0" tabpos="9">
 		<Cursor position="123" topLine="0" />
+	</File>
+	<File name="menus.c" open="0" top="0" tabpos="0">
+		<Cursor position="1810" topLine="31" />
+	</File>
+	<File name="menus.h" open="0" top="0" tabpos="0">
+		<Cursor position="113" topLine="0" />
 	</File>
 	<File name="spells.def" open="0" top="0" tabpos="0">
 		<Cursor position="90" topLine="0" />
 	</File>
 	<File name="toolkit_monster_edit.c" open="0" top="0" tabpos="8">
-		<Cursor position="975" topLine="22" />
+		<Cursor position="873" topLine="22" />
+	</File>
+	<File name="toolkit_monster_edit.h" open="0" top="0" tabpos="0">
+		<Cursor position="65" topLine="0" />
 	</File>
 	<File name="util.h" open="0" top="0" tabpos="0">
 		<Cursor position="12" topLine="0" />

@@ -49,7 +49,7 @@ void gfx_eventloop_textpause
     (void)
 {
     Controls.kb[SDLK_p] = 0;
-    gfx_text_write ("Press 'p' again to remove pause. ", 8, 8);
+    gfx_text_write ("Press 'p' again to remove pause. ", 8, 8, 0);
     SDL_Flip (Gfx.screen);
 
     while(!Controls.quit && !Controls.kb[SDLK_p])

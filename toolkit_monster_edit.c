@@ -1,6 +1,6 @@
 #include "gfx.h"
 
-static void monster_editor_draw_window (void)
+static void toolkit__monster_editor_draw_window (void)
 {
     int x = 16;
     int y = 16;
@@ -25,7 +25,7 @@ static void monster_editor_draw_window (void)
     }
 }
 
-static void monster_editor_loop (void)
+static void toolkit__monster_editor_loop (void)
 {
     while (!Controls.quit && !Controls.kb[SDLK_ESCAPE])
     {
@@ -37,15 +37,15 @@ static void monster_editor_loop (void)
         if (Controls.kb[SDLK_f])
         {
             gfx_window_toggle_fullscreen ();
-            monster_editor_draw_window ();
+            toolkit__monster_editor_draw_window ();
         }
 
         gfx_update_screen ();
     }
 }
 
-void monster_editor (void)
+void toolkit_monster_editor (void)
 {
-    monster_editor_draw_window ();
-    monster_editor_loop ();
+    toolkit__monster_editor_draw_window ();
+    toolkit__monster_editor_loop ();
 }

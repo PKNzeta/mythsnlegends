@@ -65,6 +65,10 @@
 		<Unit filename="files.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="game.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="game.h" />
 		<Unit filename="gfx.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -113,6 +117,10 @@
 		<Unit filename="map_block.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="menus.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menus.h" />
 		<Unit filename="mythsnlegends.cbp">
 			<Option target="Debug" />
 		</Unit>

@@ -25,10 +25,18 @@ Uint8 gfx_window_init
     return !error;
 }
 
+static int last_frame = 0;
 
 void gfx_update_screen
     (void)
 {
+    int this_frame = SDL_GetTicks ();
+
+    if (last_frame == 0)
+    {
+        last_frame = SDL_GetTicks ();
+    }
+
     gfx_events_update ();
 
     if (++Gfx.frame > 16)
@@ -36,8 +44,17 @@ void gfx_update_screen
         Gfx.frame = 0;
     }
 
+    while (this_frame - last_frame < 30)
+    {
+        SDL_Delay (5);
+        this_frame = SDL_GetTicks ();
+    }
+
+    last_frame = this_frame;
     while (SDL_Flip (Gfx.screen) != 0);
 
+    /* Ugly Patch */
+    SDL_Delay (30);
 //    SDL_framerateDelay (&Gfx.fps_manager);
 }
 
