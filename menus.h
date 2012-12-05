@@ -7,7 +7,7 @@
 /* This is a menu entry */
 typedef struct menu_pair
 {
-    const char txt[33];
+    const char txt[21];
     void (*func) (void);
 } MENU_PAIR;
 
@@ -29,6 +29,6 @@ typedef struct menu_struct
 MENU main_menu;
 
 
-int menu_show_menu (MENU* menu);
+int menu_show (MENU* menu);
 
 #endif /* H__MENUS */

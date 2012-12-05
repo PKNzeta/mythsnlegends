@@ -48,6 +48,7 @@ static void toolkit__monster_editor_loop (void)
 
 void toolkit_monster_editor (void)
 {
+    SDL_FillRect (Gfx.screen, NULL, 0x000000);
     toolkit__monster_editor_draw_window ();
     toolkit__monster_editor_loop ();
 }

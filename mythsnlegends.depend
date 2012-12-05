@@ -235,7 +235,7 @@
 	<SDL/SDL.h>
 	"gfx.h"
 
-1354738153 source:c:\code\mythsnlegends\gfx_text.c
+1354750078 source:c:\code\mythsnlegends\gfx_text.c
 	"gfx.h"
 
 1270558531 source:c:\code\mythsnlegends\gfx_tile.c
@@ -262,7 +262,7 @@
 
 1353813533 c:\code\mythsnlegends\monster_edit.h
 
-1354738915 source:c:\code\mythsnlegends\toolkit_monster_edit.c
+1354748468 source:c:\code\mythsnlegends\toolkit_monster_edit.c
 	"gfx.h"
 
 1354687370 c:\code\mythsnlegends\toolkit_monster_edit.h
@@ -305,13 +305,13 @@
 
 1354687707 source:c:\code\mythsnlegends\game.c
 
-1354737840 c:\code\mythsnlegends\menus.h
+1354751351 c:\code\mythsnlegends\menus.h
 
-1354738120 source:c:\code\mythsnlegends\menus.c
+1354751303 source:c:\code\mythsnlegends\menus.c
 	"gfx.h"
 	"toolkit_monster_edit.h"
 	"game.h"
 	"menus.h"
 
-1354687552 c:\code\mythsnlegends\game.h
+1354739551 c:\code\mythsnlegends\game.h
 

@@ -18,7 +18,7 @@ void gfx_text_write
     (const char* text, int x, int y, int select)
 {
     int xx = x;
-    char* txt_ptr = (char*) text;
+    unsigned char* txt_ptr = (unsigned char*) text;
 
     while (*txt_ptr != '\0')
     {
