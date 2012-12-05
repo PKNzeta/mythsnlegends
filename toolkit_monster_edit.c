@@ -42,6 +42,8 @@ static void toolkit__monster_editor_loop (void)
 
         gfx_update_screen ();
     }
+
+    Controls.kb[SDLK_ESCAPE] = 0;
 }
 
 void toolkit_monster_editor (void)

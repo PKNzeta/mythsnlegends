@@ -44,7 +44,7 @@
 		<Cursor position="17" topLine="0" />
 	</File>
 	<File name="gfx_text.c" open="0" top="0" tabpos="0">
-		<Cursor position="359" topLine="0" />
+		<Cursor position="675" topLine="0" />
 	</File>
 	<File name="gfx_text.h" open="0" top="0" tabpos="0">
 		<Cursor position="250" topLine="0" />
@@ -77,16 +77,16 @@
 		<Cursor position="123" topLine="0" />
 	</File>
 	<File name="menus.c" open="0" top="0" tabpos="0">
-		<Cursor position="1810" topLine="31" />
+		<Cursor position="1161" topLine="27" />
 	</File>
 	<File name="menus.h" open="0" top="0" tabpos="0">
-		<Cursor position="113" topLine="0" />
+		<Cursor position="187" topLine="5" />
 	</File>
 	<File name="spells.def" open="0" top="0" tabpos="0">
 		<Cursor position="90" topLine="0" />
 	</File>
 	<File name="toolkit_monster_edit.c" open="0" top="0" tabpos="8">
-		<Cursor position="873" topLine="22" />
+		<Cursor position="1230" topLine="24" />
 	</File>
 	<File name="toolkit_monster_edit.h" open="0" top="0" tabpos="0">
 		<Cursor position="65" topLine="0" />
