@@ -3,16 +3,17 @@
 void gfx_text__draw_hint (int x, int y)
 {
     SDL_Surface* hint = SDL_CreateRGBSurface
-        (SDL_HWSURFACE, 8, 8, 32, 0, 0, 0, 32);
+        (SDL_HWSURFACE, 8, 8, 32, 0, 0, 0, 256);
     SDL_Rect rect = {x, y, 8, 8};
 
     SDL_FillRect (hint, NULL, 0xffffff);
     SDL_SetColorKey(hint, SDL_SRCCOLORKEY, SDL_MapRGB(hint->format, 0, 0, 0));
-    SDL_SetAlpha (hint, SDL_SRCALPHA, 32);
+    SDL_SetAlpha (hint, SDL_SRCALPHA, 16);
 
     SDL_BlitSurface (hint, NULL, Gfx.screen, &rect);
     SDL_FreeSurface (hint);
 }
+
 
 void gfx_text_write
     (const char* text, int x, int y, int select)

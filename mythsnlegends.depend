@@ -1,28 +1,28 @@
 # depslib dependency file v1.0
-1354593336 source:c:\code\mythsnlegends\char_hero.c
+1354760558 source:c:\code\mythsnlegends\char_hero.c
 	<stdlib.h>
 	<stdio.h>
 	"char.h"
 	"char_hero.h"
 
-1354589254 c:\code\mythsnlegends\char_hero.h
+1354760558 c:\code\mythsnlegends\char_hero.h
 	"char.h"
 
-1354586835 c:\code\mythsnlegends\item.h
+1354760558 c:\code\mythsnlegends\item.h
 	"item_inv.h"
 
-1353991738 c:\code\mythsnlegends\item_inv.h
+1354760558 c:\code\mythsnlegends\item_inv.h
 
 1353351785 c:\code\mythsnlegends\char_stat.h
 
-1353887836 c:\code\mythsnlegends\map_block.h
+1354760558 c:\code\mythsnlegends\map_block.h
 	"item.h"
 
-1354585227 source:c:\code\mythsnlegends\gfx.c
+1354760558 source:c:\code\mythsnlegends\gfx.c
 	"gfx.h"
 	"files.h"
 
-1353884886 c:\code\mythsnlegends\gfx.h
+1354760558 c:\code\mythsnlegends\gfx.h
 	<SDL/SDL.h>
 	"gfx_event_loop.h"
 	"gfx_tile.h"
@@ -219,39 +219,39 @@
 	"begin_code.h"
 	"close_code.h"
 
-1353884841 c:\code\mythsnlegends\gfx_event_loop.h
+1354760558 c:\code\mythsnlegends\gfx_event_loop.h
 	<SDL/SDL.h>
 
-1267215236 c:\code\mythsnlegends\gfx_tile.h
+1354760558 c:\code\mythsnlegends\gfx_tile.h
 	<SDL/SDL.h>
 
-1353884851 c:\code\mythsnlegends\gfx_window.h
+1354760558 c:\code\mythsnlegends\gfx_window.h
 	<SDL/SDL.h>
 
-1354694953 c:\code\mythsnlegends\gfx_text.h
+1354760558 c:\code\mythsnlegends\gfx_text.h
 
-1354694964 source:c:\code\mythsnlegends\gfx_event_loop.c
+1354761209 source:c:\code\mythsnlegends\gfx_event_loop.c
 	"gfx_event_loop.h"
 	<SDL/SDL.h>
 	"gfx.h"
 
-1354750078 source:c:\code\mythsnlegends\gfx_text.c
+1354762716 source:c:\code\mythsnlegends\gfx_text.c
 	"gfx.h"
 
-1270558531 source:c:\code\mythsnlegends\gfx_tile.c
+1354760558 source:c:\code\mythsnlegends\gfx_tile.c
 	"gfx.h"
 	<SDL/SDL.h>
 
-1354697308 source:c:\code\mythsnlegends\gfx_window.c
+1354760558 source:c:\code\mythsnlegends\gfx_window.c
 	"gfx.h"
 	"gfx_event_loop.h"
 
-1353902756 source:c:\code\mythsnlegends\item_inv.c
+1354760558 source:c:\code\mythsnlegends\item_inv.c
 	<stdlib.h>
 	<stdio.h>
 	"item.h"
 
-1354689380 source:c:\code\mythsnlegends\main.c
+1354760558 source:c:\code\mythsnlegends\main.c
 	<stdlib.h>
 	"gfx.h"
 	"files.h"
@@ -262,32 +262,32 @@
 
 1353813533 c:\code\mythsnlegends\monster_edit.h
 
-1354748468 source:c:\code\mythsnlegends\toolkit_monster_edit.c
+1354760558 source:c:\code\mythsnlegends\toolkit_monster_edit.c
 	"gfx.h"
 
-1354687370 c:\code\mythsnlegends\toolkit_monster_edit.h
+1354760558 c:\code\mythsnlegends\toolkit_monster_edit.h
 
-1353992318 source:c:\code\mythsnlegends\item.c
+1354760558 source:c:\code\mythsnlegends\item.c
 	"item.h"
 	"stdio.h"
 
-1354594311 c:\code\mythsnlegends\char.h
+1354760558 c:\code\mythsnlegends\char.h
 	"item.h"
 	"map_block.h"
 	"char_skills.h"
 	"char_spells.h"
 
-1354589062 c:\code\mythsnlegends\char_skills.h
+1354760558 c:\code\mythsnlegends\char_skills.h
 	"char.h"
 
 1353987772 c:\code\mythsnlegends\char_magics.h
 	"char.h"
 
-1354588605 source:c:\code\mythsnlegends\char_skills.c
+1354760558 source:c:\code\mythsnlegends\char_skills.c
 	"char_hero.h"
 	"char.h"
 
-1354585223 source:c:\code\mythsnlegends\files.c
+1354760558 source:c:\code\mythsnlegends\files.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
@@ -295,23 +295,23 @@
 1353992627 source:c:\code\mythsnlegends\item_stock.c
 	"item.h"
 
-1354229192 c:\code\mythsnlegends\files.h
+1354760558 c:\code\mythsnlegends\files.h
 
-1354594560 c:\code\mythsnlegends\char_spells.h
+1354760558 c:\code\mythsnlegends\char_spells.h
 	"char.h"
 	"spells.def"
 
-1354594422 c:\code\mythsnlegends\spells.def
+1354760558 c:\code\mythsnlegends\spells.def
 
-1354687707 source:c:\code\mythsnlegends\game.c
+1354760558 source:c:\code\mythsnlegends\game.c
 
-1354751351 c:\code\mythsnlegends\menus.h
+1354760558 c:\code\mythsnlegends\menus.h
 
-1354751303 source:c:\code\mythsnlegends\menus.c
+1354762644 source:c:\code\mythsnlegends\menus.c
 	"gfx.h"
 	"toolkit_monster_edit.h"
 	"game.h"
 	"menus.h"
 
-1354739551 c:\code\mythsnlegends\game.h
+1354760558 c:\code\mythsnlegends\game.h
 

@@ -55,30 +55,6 @@ void gfx_eventloop_textpause
     while(!Controls.quit && !Controls.kb[SDLK_p])
     {
         gfx_events_update ();
-//        SDL_framerateDelay (&Gfx.fps_manager);
-    }
-}
-
-void gfx_eventloop_mainloop
-    (void)
-{
-    while (!Controls.quit && !Controls.kb[SDLK_ESCAPE])
-    {
-        if (Controls.mouse[0])
-        {
-            /*click*/
-        }
-
-        if (Controls.kb[SDLK_p])
-        {
-            gfx_eventloop_textpause ();
-        }
-
-        if (Controls.kb[SDLK_f])
-        {
-            gfx_window_toggle_fullscreen ();
-        }
-
         gfx_update_screen ();
     }
 }

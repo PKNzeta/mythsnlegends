@@ -13,8 +13,8 @@ MENU option_menu =
     {
         {"   Fullscreen       ", gfx_window_toggle_fullscreen},
         {"   Monster Editor   ", toolkit_monster_editor},
-        {"   Save options     ", NULL},
-        {"   Cancel           ", NULL}
+        {"   Save Options     ", NULL},
+        {" \x12 Back             ", NULL}
     },
     POS_MENU_ENTRY_CENTER(4)
 };
@@ -24,7 +24,7 @@ MENU main_menu =
     {
         {"   Start New Game   ", game_start_new},
         {"   Load Game        ", game_load},
-        {"   Options          ", game_options},
+        {"   Options        \x11 ", game_options},
         {"   Quit             ", NULL}
     },
     POS_MENU_ENTRY_CENTER(4)
@@ -58,7 +58,7 @@ static void menu__fade_bg (MENU* menu)
     SDL_Surface* surf = SDL_CreateRGBSurface
             (SDL_HWSURFACE, (20 * 8), (menu->i * 8), 20, 0, 0, 0, 128);
     SDL_FillRect (surf, NULL, 0x000000);
-    SDL_SetAlpha (surf, SDL_SRCALPHA, 64);
+    SDL_SetAlpha (surf, SDL_SRCALPHA, 32);
     SDL_BlitSurface (surf, NULL, Gfx.screen, &r);
 
     SDL_FreeSurface (surf);
