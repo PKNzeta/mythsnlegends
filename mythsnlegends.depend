@@ -228,14 +228,14 @@
 1354760558 c:\code\mythsnlegends\gfx_window.h
 	<SDL/SDL.h>
 
-1354760558 c:\code\mythsnlegends\gfx_text.h
+1354843724 c:\code\mythsnlegends\gfx_text.h
 
 1354761209 source:c:\code\mythsnlegends\gfx_event_loop.c
 	"gfx_event_loop.h"
 	<SDL/SDL.h>
 	"gfx.h"
 
-1354762716 source:c:\code\mythsnlegends\gfx_text.c
+1354843749 source:c:\code\mythsnlegends\gfx_text.c
 	"gfx.h"
 
 1354760558 source:c:\code\mythsnlegends\gfx_tile.c
@@ -251,19 +251,21 @@
 	<stdio.h>
 	"item.h"
 
-1354760558 source:c:\code\mythsnlegends\main.c
+1354836639 source:c:\code\mythsnlegends\main.c
 	<stdlib.h>
 	"gfx.h"
 	"files.h"
 	"menus.h"
+	"messages.h"
 
 1353816131 source:c:\code\mythsnlegends\monster_edit.c
 	"gfx.h"
 
 1353813533 c:\code\mythsnlegends\monster_edit.h
 
-1354760558 source:c:\code\mythsnlegends\toolkit_monster_edit.c
+1354838845 source:c:\code\mythsnlegends\toolkit_monster_edit.c
 	"gfx.h"
+	"toolkit.h"
 
 1354760558 c:\code\mythsnlegends\toolkit_monster_edit.h
 
@@ -303,15 +305,32 @@
 
 1354760558 c:\code\mythsnlegends\spells.def
 
-1354760558 source:c:\code\mythsnlegends\game.c
+1354836639 source:c:\code\mythsnlegends\game.c
+	"menus.h"
+	"messages.h"
 
 1354760558 c:\code\mythsnlegends\menus.h
 
-1354762644 source:c:\code\mythsnlegends\menus.c
+1354840743 source:c:\code\mythsnlegends\menus.c
 	"gfx.h"
 	"toolkit_monster_edit.h"
 	"game.h"
 	"menus.h"
+	"messages.h"
 
-1354760558 c:\code\mythsnlegends\game.h
+1354836732 c:\code\mythsnlegends\game.h
+
+1354844650 source:c:\code\mythsnlegends\messages.c
+	"stdlib.h"
+	"string.h"
+	"gfx.h"
+	"toolkit.h"
+	"messages.h"
+
+1354843880 c:\code\mythsnlegends\messages.h
+
+1354839060 source:c:\code\mythsnlegends\toolkit.c
+	"gfx.h"
+
+1354838980 c:\code\mythsnlegends\toolkit.h
 

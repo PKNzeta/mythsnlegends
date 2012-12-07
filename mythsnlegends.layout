@@ -26,28 +26,28 @@
 		<Cursor position="191" topLine="3" />
 	</File>
 	<File name="game.c" open="0" top="0" tabpos="0">
-		<Cursor position="140" topLine="0" />
+		<Cursor position="153" topLine="0" />
 	</File>
 	<File name="game.h" open="0" top="0" tabpos="0">
-		<Cursor position="135" topLine="0" />
+		<Cursor position="188" topLine="0" />
 	</File>
 	<File name="gfx.c" open="0" top="0" tabpos="3">
 		<Cursor position="1052" topLine="34" />
 	</File>
 	<File name="gfx.h" open="0" top="0" tabpos="2">
-		<Cursor position="908" topLine="0" />
+		<Cursor position="908" topLine="20" />
 	</File>
 	<File name="gfx_event_loop.c" open="0" top="0" tabpos="4">
-		<Cursor position="1130" topLine="3" />
+		<Cursor position="1054" topLine="31" />
 	</File>
 	<File name="gfx_event_loop.h" open="0" top="0" tabpos="6">
 		<Cursor position="17" topLine="0" />
 	</File>
 	<File name="gfx_text.c" open="0" top="0" tabpos="0">
-		<Cursor position="577" topLine="16" />
+		<Cursor position="561" topLine="5" />
 	</File>
 	<File name="gfx_text.h" open="0" top="0" tabpos="0">
-		<Cursor position="250" topLine="0" />
+		<Cursor position="272" topLine="0" />
 	</File>
 	<File name="gfx_tile.c" open="0" top="0" tabpos="23">
 		<Cursor position="0" topLine="12" />
@@ -71,19 +71,31 @@
 		<Cursor position="679" topLine="5" />
 	</File>
 	<File name="main.c" open="0" top="0" tabpos="1">
-		<Cursor position="373" topLine="0" />
+		<Cursor position="261" topLine="0" />
 	</File>
 	<File name="map_block.h" open="0" top="0" tabpos="9">
 		<Cursor position="123" topLine="0" />
 	</File>
 	<File name="menus.c" open="0" top="0" tabpos="0">
-		<Cursor position="323" topLine="0" />
+		<Cursor position="135" topLine="0" />
 	</File>
 	<File name="menus.h" open="0" top="0" tabpos="0">
 		<Cursor position="438" topLine="5" />
 	</File>
+	<File name="messages.c" open="0" top="0" tabpos="0">
+		<Cursor position="2127" topLine="81" />
+	</File>
+	<File name="messages.h" open="0" top="0" tabpos="0">
+		<Cursor position="110" topLine="0" />
+	</File>
 	<File name="spells.def" open="0" top="0" tabpos="0">
 		<Cursor position="90" topLine="0" />
+	</File>
+	<File name="toolkit.c" open="0" top="0" tabpos="0">
+		<Cursor position="846" topLine="0" />
+	</File>
+	<File name="toolkit.h" open="0" top="0" tabpos="0">
+		<Cursor position="42" topLine="0" />
 	</File>
 	<File name="toolkit_monster_edit.c" open="0" top="0" tabpos="8">
 		<Cursor position="16" topLine="0" />

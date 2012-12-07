@@ -121,10 +121,18 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="menus.h" />
+		<Unit filename="messages.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="messages.h" />
 		<Unit filename="mythsnlegends.cbp">
 			<Option target="Debug" />
 		</Unit>
 		<Unit filename="spells.def" />
+		<Unit filename="toolkit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="toolkit.h" />
 		<Unit filename="toolkit_monster_edit.c">
 			<Option compilerVar="CC" />
 		</Unit>

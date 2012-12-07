@@ -6,6 +6,7 @@ void main_init (void);
 void game_start_new (void);
 void game_load (void);
 void game_options (void);
+void dbg_dummy (void);
 
 
 #endif /* H__GAME */

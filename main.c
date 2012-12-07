@@ -3,6 +3,7 @@
 #include "gfx.h"
 #include "files.h"
 #include "menus.h"
+#include "messages.h"
 
 void main_quit (void)
 {

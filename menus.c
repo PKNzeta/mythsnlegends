@@ -2,6 +2,7 @@
 #include "toolkit_monster_edit.h"
 #include "game.h"
 #include "menus.h"
+#include "messages.h"
 
 #define POS_MENU_ENTRY_CENTER(n)\
     n,\
@@ -13,7 +14,7 @@ MENU option_menu =
     {
         {"   Fullscreen       ", gfx_window_toggle_fullscreen},
         {"   Monster Editor   ", toolkit_monster_editor},
-        {"   Save Options     ", NULL},
+        {"   Save Options     ", dbg_dummy},
         {" \x12 Back             ", NULL}
     },
     POS_MENU_ENTRY_CENTER(4)
@@ -22,8 +23,8 @@ MENU option_menu =
 MENU main_menu =
 {
     {
-        {"   Start New Game   ", game_start_new},
-        {"   Load Game        ", game_load},
+        {"   Start New Game   ", messages_history}, //dbg_dummy},
+        {"   Load Game        ", dbg_dummy},
         {"   Options        \x11 ", game_options},
         {"   Quit             ", NULL}
     },
@@ -116,7 +117,7 @@ int menu_show (MENU* menu)
             {
                 Controls.kb[SDLK_RETURN] = 0;
                 menu->menu[choice].func ();
-                SDL_FillRect (Gfx.screen, NULL, 0x000000);
+                //SDL_FillRect (Gfx.screen, NULL, 0x000000);
                 menu__draw_frame (menu);
                 Controls.kb[SDLK_RETURN] = 0;
             }
