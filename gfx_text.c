@@ -1,10 +1,12 @@
 #include "gfx.h"
 
+#define GFX_TXT_OFFSET 0
+
 void gfx_text__draw_hint (int x, int y)
 {
     SDL_Surface* hint = SDL_CreateRGBSurface
-        (SDL_HWSURFACE, 8, 8, 32, 0, 0, 0, 256);
-    SDL_Rect rect = {x, y, 8, 8};
+        (SDL_HWSURFACE, TSIZE, TSIZE, 32, 0, 0, 0, 0);
+    SDL_Rect rect = {x, y, TSIZE, TSIZE};
 
     SDL_FillRect (hint, NULL, 0xffffff);
     SDL_SetColorKey(hint, SDL_SRCCOLORKEY, SDL_MapRGB(hint->format, 0, 0, 0));
@@ -25,7 +27,7 @@ void gfx_text_write
     {
         while (*txt_ptr == '\n')
         {
-            x = xx; y += 8; txt_ptr++;
+            x = xx; y += TSIZE; txt_ptr++;
         }
 
         if (select)
@@ -35,17 +37,18 @@ void gfx_text_write
 
         if (*txt_ptr == ' ')
         {
-            x += 8; txt_ptr++;
+            x += TSIZE; txt_ptr++;
         }
         else if (*txt_ptr == '#')
         {
             gfx_tileset_draw_tile (&Gfx.tiles_ascii, rand () % 256, x, y);
-            x += 8; txt_ptr++;
+            x += TSIZE; txt_ptr++;
         }
         else
         {
-            gfx_tileset_draw_tile (&Gfx.tiles_ascii, *txt_ptr-1, x, y);
-            x += 8; txt_ptr++;
+            gfx_tileset_draw_tile
+                (&Gfx.tiles_ascii, *txt_ptr + GFX_TXT_OFFSET, x, y);
+            x += TSIZE; txt_ptr++;
         }
     }
 }

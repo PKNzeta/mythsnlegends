@@ -6,8 +6,8 @@
 
 #define POS_MENU_ENTRY_CENTER(n)\
     n,\
-    (GFX_WIN_X_SIZE / 2) - (10 * 8),\
-    (GFX_WIN_Y_SIZE / 2) - (8 * n)
+    (GFX_WIN_X_SIZE / 2) - (10 * TSIZE),\
+    (GFX_WIN_Y_SIZE / 2) - (TSIZE * n)
 
 MENU option_menu =
 {
@@ -15,7 +15,7 @@ MENU option_menu =
         {"   Fullscreen       ", gfx_window_toggle_fullscreen},
         {"   Monster Editor   ", toolkit_monster_editor},
         {"   Save Options     ", dbg_dummy},
-        {" \x12 Back             ", NULL}
+        {" \x11 Back             ", NULL}
     },
     POS_MENU_ENTRY_CENTER(4)
 };
@@ -25,7 +25,7 @@ MENU main_menu =
     {
         {"   Start New Game   ", messages_history}, //dbg_dummy},
         {"   Load Game        ", dbg_dummy},
-        {"   Options        \x11 ", game_options},
+        {"   Options        \x10 ", game_options},
         {"   Quit             ", NULL}
     },
     POS_MENU_ENTRY_CENTER(4)
@@ -38,26 +38,26 @@ static void menu__draw_frame (MENU* menu)
 
     gfx_text_write ("\xda\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4"
                     "\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xbf",
-                    menu->x - 8, menu->y - 8, 0);
+                    menu->x - TSIZE, menu->y - TSIZE, 0);
 
     while (i < menu->i)
     {
         gfx_text_write ("\xb3                    \xb3",
-                         menu->x - 8, menu->y + (i * 8), 0);
+                         menu->x - TSIZE, menu->y + (i * TSIZE), 0);
         i++;
     }
 
     gfx_text_write ("\xc0\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4"
                     "\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xd9",
-                    menu->x - 8, menu->y + (i * 8), 0);
+                    menu->x - TSIZE, menu->y + (i * TSIZE), 0);
 }
 
 
 static void menu__fade_bg (MENU* menu)
 {
-    SDL_Rect  r = {menu->x, menu->y, (20 * 8), (menu->i * 8)};
+    SDL_Rect  r = {menu->x, menu->y, (20 * TSIZE), (menu->i * TSIZE)};
     SDL_Surface* surf = SDL_CreateRGBSurface
-            (SDL_HWSURFACE, (20 * 8), (menu->i * 8), 20, 0, 0, 0, 128);
+            (SDL_HWSURFACE, (20 * TSIZE), (menu->i * TSIZE), 20, 0, 0, 0, 128);
     SDL_FillRect (surf, NULL, 0x000000);
     SDL_SetAlpha (surf, SDL_SRCALPHA, 32);
     SDL_BlitSurface (surf, NULL, Gfx.screen, &r);
@@ -72,18 +72,17 @@ static void menu__draw_menu (MENU* menu, int cur)
 
     menu__fade_bg (menu);
 
-    while (i < menu->i)
+    do
     {
         if (i == cur)
         {
-            gfx_text_write (menu->menu[i].txt, menu->x, menu->y + (i * 8), 1);
+            gfx_text_write (menu->menu[i].txt, menu->x, menu->y + (i * TSIZE), 1);
         }
         else
         {
-            gfx_text_write (menu->menu[i].txt, menu->x, menu->y + (i * 8), 0);
+            gfx_text_write (menu->menu[i].txt, menu->x, menu->y + (i * TSIZE), 0);
         }
-        i++;
-    }
+    } while (i++ < menu->i);
 }
 
 int menu_show (MENU* menu)

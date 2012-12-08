@@ -168,6 +168,8 @@ void gfx_window_toggle_fullscreen (void)
 {
     if (!SDL_WM_ToggleFullScreen (Gfx.screen))
     {
+        SDL_FreeSurface (Gfx.screen);
+
         if (fs == 0)
         {
             Gfx.screen = SDL_SetVideoMode (GFX_WIN_RESOLUTION,

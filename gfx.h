@@ -40,6 +40,8 @@
 #include "gfx_window.h"
 #include "gfx_text.h"
 
+#define TSIZE 8
+
 
 /* here we're defining a structure in which we store all the tilesets or
  * whatever graphics needed, this way, they all will be easily accessible. */

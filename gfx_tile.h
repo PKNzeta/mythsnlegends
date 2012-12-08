@@ -1,18 +1,23 @@
-/* gfx_tile.h
- * Wrote by <F Cardascia> <PKNzeta>
- * All rights reserved to original author
- * This file is part of v0lt, a graphical noise box */
+/* gfx_tile.h */
 
 #ifndef H_GFX_TILE
 #define H_GFX_TILE
 
 #include <SDL/SDL.h>
 
+#define TILE_MAX 1024
+
+typedef struct tile_struct
+{
+    SDL_Surface* bitmap;
+    SDL_Surface* bitmap_transparent;
+} TILE;
+
 /** A structure to store information relative to a loaded tileset file */
 typedef struct
 {
   /* the bitmap we use for drawing */
-  SDL_Surface* bitmap;
+  TILE tile[TILE_MAX];
 
   /* the size in pixel of a single tile (it must be squares) */
   Uint16 size;

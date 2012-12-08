@@ -1,7 +1,8 @@
 /* history.c */
 
-#include "stdlib.h"
-#include "string.h"
+#include <stdlib.h>
+#include <string.h>
+
 #include "gfx.h"
 #include "toolkit.h"
 #include "messages.h"

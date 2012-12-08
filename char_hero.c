@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 #include "char.h"
-#include "char_hero.h"
 
 CHARACTER Hero =
 {

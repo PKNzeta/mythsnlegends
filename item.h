@@ -30,43 +30,20 @@ typedef struct item_struct
     int         cursed; /* 0:Normal 1:Cursed 2:Blessed */
     int         identified;
 
-    ///* armor attributes */
-    //int               a_armor;
-    //ITEM_ARMOR_TYPE*  armor;
-
-    ///* weapon attributes */
-    //int               w_damage;
-    //int               w_ch_to_hit;
-    //ITEM_WEAPON_TYPE* weapon;
-
-    ///* tool attributes */
-    //ITEM_TOOL_TYPE*   tool;
-
-    ///* potion attributes */
-    //ITEM_POTION_TYPE* potion;
-    //int               p_concentration;
-    //int               p_fullness;
-
-    ///* scroll */
-    //ITEM_SCROLL_TYPE* scroll;
-
-    ///* book attributes */
-    //ITEM_BOOK_TYPE*   book;
-
-    ///* wand attributes */
-    //ITEM_WAND_TYPE*   wand;
-
-    ///* food attributes */
-    //ITEM_FOOD_TYPE*   food;
-
-    ///* ring attributes */
-    //ITEM_RING_TYPE*   ring;
-
-    ///* gauntlet attibutes */
-    //ITEM_GAUNTLET_TYPE* gauntlet;
-
-    ///* other random attributes */
-    //ITEM_OTHER_ATTRIBUTES* other */
+    /* Item attributes */
+    /* it can be one of them:
+        ITEM_ARMOR_TYPE*
+        ITEM_WEAPON_TYPE*
+        ITEM_TOOL_TYPE*
+        ITEM_POTION_TYPE*
+        ITEM_SCROLL_TYPE*
+        ITEM_BOOK_TYPE*
+        ITEM_WAND_TYPE*
+        ITEM_FOOD_TYPE*
+        ITEM_RING_TYPE*
+        ITEM_GAUNTLET_TYPE*
+        ITEM_OTHER_TYPE* */
+    void*       attrib;
 
     /* Items can be stacked, this point to the previous
      * and the next item in the stack */

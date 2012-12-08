@@ -1,26 +1,38 @@
-/* gfx_tile.c
- * Wrote by <F Cardascia> <PKNzeta>
- * All rights reserved to original author
- * This file is part of v0lt, a graphical noise box */
+/* gfx_tile.c */
 
 #include "gfx.h"
 #include <SDL/SDL.h>
 
-/* copy each tiles on a single line. this way, we avoid
- * computing of y axis when drawing with gfx_tiles_draw() */
 static void gfx_tileset_init__cp_bitmap
-    (SDL_Surface *src, SDL_Surface *dest)
+    (GFX_TILESET *t, SDL_Surface *src)
 {
-    SDL_Rect cp_rect_tmp = { 0, 0, src->w, dest->h };
-    SDL_Rect cp_rect_tiles = { 0, 0, src->w, dest->h };
+    int      tsize = t->size;
+    int      i = 0;
+    SDL_Rect r = { 0, 0, tsize, tsize};
 
-    do
+    for (i = 0; i < t->count; i++)
     {
-        SDL_BlitSurface (src, &cp_rect_tmp, dest, &cp_rect_tiles);
-        cp_rect_tmp.y += dest->h;
-        cp_rect_tiles.x += src->w;
+        t->tile[i].bitmap = SDL_CreateRGBSurface
+                                (SDL_HWSURFACE, tsize, tsize, 32, 0, 0, 0, 0);
+        t->tile[i].bitmap_transparent = SDL_CreateRGBSurface
+                                (SDL_HWSURFACE, tsize, tsize, 32, 0, 0, 0, 0);
+        SDL_BlitSurface (src, &r, t->tile[i].bitmap, NULL);
+        SDL_BlitSurface (src, &r, t->tile[i].bitmap_transparent, NULL);
+        SDL_SetColorKey
+            (t->tile[i].bitmap_transparent, SDL_SRCCOLORKEY,
+             SDL_MapRGB(t->tile[i].bitmap_transparent->format, 255, 0, 255));
+        SDL_SetColorKey
+            (t->tile[i].bitmap, SDL_SRCCOLORKEY,
+             SDL_MapRGB(t->tile[i].bitmap_transparent->format, 255, 0, 255));
+        SDL_SetAlpha (t->tile[i].bitmap_transparent, SDL_SRCALPHA, 16);
+        r.x += tsize;
+
+        if (r.x >= src->w)
+        {
+            r.x = 0;
+            r.y += tsize;
+        }
     }
-    while (cp_rect_tmp.y != src->h);
 }
 
 Uint8 gfx_tileset_init
@@ -29,18 +41,11 @@ Uint8 gfx_tileset_init
     Uint8 error = 0;
     SDL_Surface *tmp_bitmap = SDL_LoadBMP (file);
 
-    /* if we have successfully loaded tmp_bitmap
-     * and allocated memory for the tileset bitmap */
-    if ( (tmp_bitmap != NULL)
-    &&   (t->bitmap = SDL_CreateRGBSurface
-            (SDL_HWSURFACE, tmp_bitmap->w * (tmp_bitmap->h / size), size,
-             32, GFX_SDL_MASKS)) != NULL )
+    if (tmp_bitmap != NULL)
     {
         t->size = size;
-        t->count = t->bitmap->w / size;
-        SDL_SetColorKey (tmp_bitmap, SDL_SRCCOLORKEY, 0xff00ff);
-        gfx_tileset_init__cp_bitmap (tmp_bitmap, t->bitmap);
-        SDL_FreeSurface (tmp_bitmap);
+        t->count = (tmp_bitmap->w / size) * (tmp_bitmap->h / size);
+        gfx_tileset_init__cp_bitmap (t, tmp_bitmap);
     }
     else
     {
@@ -54,17 +59,24 @@ Uint8 gfx_tileset_init
 void gfx_tileset_draw_tile
     (GFX_TILESET *t, const Uint16 num, const Sint16 x, const Sint16 y)
 {
-    SDL_Rect rect_t = { (num * t->size), 0, t->size, t->size };
     SDL_Rect rect_s = { x, y, t->size, t->size };
 
-    SDL_BlitSurface (t->bitmap, &rect_t, Gfx.screen, &rect_s);
+    SDL_BlitSurface (t->tile[num].bitmap, NULL, Gfx.screen, &rect_s);
 }
 
 
 void gfx_tileset_free
     (GFX_TILESET *t)
 {
-    SDL_FreeSurface (t->bitmap);
+    int i;
 
-    t->bitmap = NULL;
+    for (i = 0; i < TILE_MAX; i++)
+    {
+        if (t->tile[i].bitmap != NULL)
+        {
+            SDL_FreeSurface (t->tile[i].bitmap);
+            SDL_FreeSurface (t->tile[i].bitmap_transparent);
+        }
+        t->tile[i].bitmap = t->tile[i].bitmap_transparent = NULL;
+    }
 }

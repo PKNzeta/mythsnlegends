@@ -36,5 +36,6 @@ typedef struct charac_struct
 
 } CHARACTER;
 
+#include "char_hero.h"
 
 #endif /* H__CHAR */
