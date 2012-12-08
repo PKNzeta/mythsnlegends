@@ -3,11 +3,13 @@
 #include "game.h"
 #include "menus.h"
 #include "messages.h"
+#include "map.h"
 
-#define POS_MENU_ENTRY_CENTER(n)\
+/* n  is the number of item in the menu */
+#define MENU_POSITION_CENTER(n)\
     n,\
-    (GFX_WIN_X_SIZE / 2) - (10 * TSIZE),\
-    (GFX_WIN_Y_SIZE / 2) - (TSIZE * n)
+    (GFX_WIN_X_SIZE / 2) - (10 * GFX_TEXT_SIZE),\
+    (GFX_WIN_Y_SIZE / 2) - (GFX_TEXT_SIZE * n)
 
 MENU option_menu =
 {
@@ -17,49 +19,50 @@ MENU option_menu =
         {"   Save Options     ", dbg_dummy},
         {" \x11 Back             ", NULL}
     },
-    POS_MENU_ENTRY_CENTER(4)
+    MENU_POSITION_CENTER(4)
 };
 
 MENU main_menu =
 {
     {
-        {"   Start New Game   ", messages_history}, //dbg_dummy},
+        {"   Start New Game   ", dbg_dummy},
         {"   Load Game        ", dbg_dummy},
         {"   Options        \x10 ", game_options},
         {"   Quit             ", NULL}
     },
-    POS_MENU_ENTRY_CENTER(4)
+    MENU_POSITION_CENTER(4)
 };
 
 
 static void menu__draw_frame (MENU* menu)
 {
     int i = 0;
+    int size = Gfx.tiles_ascii.size;
 
     gfx_text_write ("\xda\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4"
                     "\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xbf",
-                    menu->x - TSIZE, menu->y - TSIZE, 0);
+                    menu->x - size, menu->y - size, 0);
 
     while (i < menu->i)
     {
         gfx_text_write ("\xb3                    \xb3",
-                         menu->x - TSIZE, menu->y + (i * TSIZE), 0);
+                         menu->x - size, menu->y + (i * size), 0);
         i++;
     }
 
     gfx_text_write ("\xc0\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4"
                     "\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xd9",
-                    menu->x - TSIZE, menu->y + (i * TSIZE), 0);
+                    menu->x - size, menu->y + (i * size), 0);
 }
 
 
 static void menu__fade_bg (MENU* menu)
 {
-    SDL_Rect  r = {menu->x, menu->y, (20 * TSIZE), (menu->i * TSIZE)};
+    int size = Gfx.tiles_ascii.size;
+    SDL_Rect  r = {menu->x, menu->y, (20 * size), (menu->i * size)};
     SDL_Surface* surf = SDL_CreateRGBSurface
-            (SDL_HWSURFACE, (20 * TSIZE), (menu->i * TSIZE), 20, 0, 0, 0, 128);
-    SDL_FillRect (surf, NULL, 0x000000);
-    SDL_SetAlpha (surf, SDL_SRCALPHA, 32);
+            (SDL_HWSURFACE, (20 * size), (menu->i * size), 20, 0, 0, 0, 128);
+    SDL_SetAlpha (surf, SDL_SRCALPHA, 64);
     SDL_BlitSurface (surf, NULL, Gfx.screen, &r);
 
     SDL_FreeSurface (surf);
@@ -68,7 +71,8 @@ static void menu__fade_bg (MENU* menu)
 
 static void menu__draw_menu (MENU* menu, int cur)
 {
-    int       i = 0;
+    int i = 0;
+    int size = Gfx.tiles_ascii.size;
 
     menu__fade_bg (menu);
 
@@ -76,11 +80,13 @@ static void menu__draw_menu (MENU* menu, int cur)
     {
         if (i == cur)
         {
-            gfx_text_write (menu->menu[i].txt, menu->x, menu->y + (i * TSIZE), 1);
+            gfx_text_write
+                    (menu->menu[i].txt, menu->x, menu->y + (i * size), 1);
         }
         else
         {
-            gfx_text_write (menu->menu[i].txt, menu->x, menu->y + (i * TSIZE), 0);
+            gfx_text_write
+                    (menu->menu[i].txt, menu->x, menu->y + (i * size), 0);
         }
     } while (i++ < menu->i);
 }
@@ -99,14 +105,14 @@ int menu_show (MENU* menu)
         if (Controls.kb[SDLK_DOWN])
         {
             if (++choice >= menu->i)
-                choice--;
+                choice = 0;
             Controls.kb[SDLK_DOWN] = 0;
         }
 
         if (Controls.kb[SDLK_UP])
         {
             if (--choice < 0)
-                choice = 0;
+                choice = menu->i - 1;
             Controls.kb[SDLK_UP] = 0;
         }
 
@@ -116,7 +122,7 @@ int menu_show (MENU* menu)
             {
                 Controls.kb[SDLK_RETURN] = 0;
                 menu->menu[choice].func ();
-                //SDL_FillRect (Gfx.screen, NULL, 0x000000);
+                SDL_FillRect (Gfx.screen, NULL, 0x000000);
                 menu__draw_frame (menu);
                 Controls.kb[SDLK_RETURN] = 0;
             }

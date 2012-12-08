@@ -14,14 +14,14 @@
 
 1353351785 c:\code\mythsnlegends\char_stat.h
 
-1354926922 c:\code\mythsnlegends\map_block.h
+1354942549 c:\code\mythsnlegends\map_block.h
 	"item.h"
 
-1354923456 source:c:\code\mythsnlegends\gfx.c
+1354934917 source:c:\code\mythsnlegends\gfx.c
 	"gfx.h"
 	"files.h"
 
-1354925139 c:\code\mythsnlegends\gfx.h
+1354935088 c:\code\mythsnlegends\gfx.h
 	<SDL/SDL.h>
 	"gfx_event_loop.h"
 	"gfx_tile.h"
@@ -221,7 +221,7 @@
 1354760558 c:\code\mythsnlegends\gfx_event_loop.h
 	<SDL/SDL.h>
 
-1354928032 c:\code\mythsnlegends\gfx_tile.h
+1354937604 c:\code\mythsnlegends\gfx_tile.h
 	<SDL/SDL.h>
 
 1354760558 c:\code\mythsnlegends\gfx_window.h
@@ -234,14 +234,14 @@
 	<SDL/SDL.h>
 	"gfx.h"
 
-1354924613 source:c:\code\mythsnlegends\gfx_text.c
+1354935010 source:c:\code\mythsnlegends\gfx_text.c
 	"gfx.h"
 
-1354931203 source:c:\code\mythsnlegends\gfx_tile.c
+1354934227 source:c:\code\mythsnlegends\gfx_tile.c
 	"gfx.h"
 	<SDL/SDL.h>
 
-1354925563 source:c:\code\mythsnlegends\gfx_window.c
+1354951227 source:c:\code\mythsnlegends\gfx_window.c
 	"gfx.h"
 	"gfx_event_loop.h"
 
@@ -308,14 +308,15 @@
 	"menus.h"
 	"messages.h"
 
-1354760558 c:\code\mythsnlegends\menus.h
+1354945697 c:\code\mythsnlegends\menus.h
 
-1354925979 source:c:\code\mythsnlegends\menus.c
+1354942631 source:c:\code\mythsnlegends\menus.c
 	"gfx.h"
 	"toolkit_monster_edit.h"
 	"game.h"
 	"menus.h"
 	"messages.h"
+	"map.h"
 
 1354836732 c:\code\mythsnlegends\game.h
 
@@ -332,4 +333,17 @@
 	"gfx.h"
 
 1354838980 c:\code\mythsnlegends\toolkit.h
+
+1354949891 source:c:\code\mythsnlegends\map_block.c
+	<stdlib.h>
+	"map_block.h"
+	"gfx.h"
+
+1354952291 source:c:\code\mythsnlegends\map.c
+	<stdlib.h>
+	"map.h"
+	"gfx.h"
+
+1354952301 c:\code\mythsnlegends\map.h
+	"map_block.h"
 

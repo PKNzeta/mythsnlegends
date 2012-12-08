@@ -32,10 +32,10 @@
 		<Cursor position="188" topLine="0" />
 	</File>
 	<File name="gfx.c" open="0" top="0" tabpos="3">
-		<Cursor position="473" topLine="0" />
+		<Cursor position="371" topLine="34" />
 	</File>
 	<File name="gfx.h" open="0" top="0" tabpos="2">
-		<Cursor position="924" topLine="13" />
+		<Cursor position="1027" topLine="26" />
 	</File>
 	<File name="gfx_event_loop.c" open="0" top="0" tabpos="4">
 		<Cursor position="975" topLine="0" />
@@ -44,19 +44,19 @@
 		<Cursor position="17" topLine="0" />
 	</File>
 	<File name="gfx_text.c" open="0" top="0" tabpos="0">
-		<Cursor position="403" topLine="0" />
+		<Cursor position="456" topLine="0" />
 	</File>
 	<File name="gfx_text.h" open="0" top="0" tabpos="0">
 		<Cursor position="272" topLine="0" />
 	</File>
 	<File name="gfx_tile.c" open="0" top="0" tabpos="23">
-		<Cursor position="1762" topLine="40" />
+		<Cursor position="539" topLine="63" />
 	</File>
 	<File name="gfx_tile.h" open="0" top="0" tabpos="0">
-		<Cursor position="455" topLine="0" />
+		<Cursor position="1346" topLine="24" />
 	</File>
 	<File name="gfx_window.c" open="0" top="0" tabpos="5">
-		<Cursor position="4081" topLine="157" />
+		<Cursor position="4036" topLine="155" />
 	</File>
 	<File name="gfx_window.h" open="0" top="0" tabpos="7">
 		<Cursor position="849" topLine="0" />
@@ -71,22 +71,31 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="item_inv.h" open="0" top="0" tabpos="15">
-		<Cursor position="679" topLine="5" />
+		<Cursor position="679" topLine="1" />
 	</File>
 	<File name="main.c" open="0" top="0" tabpos="1">
 		<Cursor position="261" topLine="0" />
 	</File>
+	<File name="map.c" open="0" top="0" tabpos="0">
+		<Cursor position="59" topLine="0" />
+	</File>
+	<File name="map.h" open="0" top="0" tabpos="0">
+		<Cursor position="273" topLine="0" />
+	</File>
+	<File name="map_block.c" open="0" top="0" tabpos="0">
+		<Cursor position="235" topLine="0" />
+	</File>
 	<File name="map_block.h" open="0" top="0" tabpos="9">
-		<Cursor position="160" topLine="0" />
+		<Cursor position="289" topLine="0" />
 	</File>
 	<File name="menus.c" open="0" top="0" tabpos="0">
-		<Cursor position="706" topLine="0" />
+		<Cursor position="670" topLine="13" />
 	</File>
 	<File name="menus.h" open="0" top="0" tabpos="0">
-		<Cursor position="438" topLine="5" />
+		<Cursor position="394" topLine="5" />
 	</File>
 	<File name="messages.c" open="0" top="0" tabpos="0">
-		<Cursor position="211" topLine="0" />
+		<Cursor position="211" topLine="6" />
 	</File>
 	<File name="messages.h" open="0" top="0" tabpos="0">
 		<Cursor position="110" topLine="0" />

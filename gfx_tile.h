@@ -41,7 +41,9 @@ Uint8 gfx_tileset_init
  * @param x : where to draw on the X axis
  * @param y : where to draw on the Y axis */
 void gfx_tileset_draw_tile
-    (GFX_TILESET* t, const Uint16 tile_num, Sint16 x, Sint16 y);
+    (GFX_TILESET* t, const Uint16 tile_num, const Sint16 x, const Sint16 y);
+void gfx_tileset_draw_tile_transparent
+    (GFX_TILESET* t, const Uint16 tile_num, const Sint16 x, const Sint16 y);
 
 /** Free ressources allocated for the tileset t
  * @param t : a pointer to the tileset to free

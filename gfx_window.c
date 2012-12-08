@@ -53,8 +53,6 @@ void gfx_update_screen
     last_frame = this_frame;
     while (SDL_Flip (Gfx.screen) != 0);
 
-    /* Ugly Patch */
-    SDL_Delay (30);
 //    SDL_framerateDelay (&Gfx.fps_manager);
 }
 
