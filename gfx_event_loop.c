@@ -5,8 +5,6 @@
 
 gfx_events Controls;
 
-#define HANDLE_EVENT(evt)\
-    if (event.type == evt)
 
 void gfx_events_update
     (void)
@@ -16,7 +14,10 @@ void gfx_events_update
     while (SDL_PollEvent (&event))
     {
         HANDLE_EVENT( SDL_KEYDOWN )
+        {
             Controls.kb[event.key.keysym.sym] = 1;
+            Controls.last = event.key.keysym.sym;
+        }
 
         HANDLE_EVENT( SDL_KEYUP )
             Controls.kb[event.key.keysym.sym] = 0;

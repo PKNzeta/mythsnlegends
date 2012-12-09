@@ -1,6 +1,14 @@
 #ifndef H__FILES
 #define H__FILES
 
+#ifdef WIN32
+#  define N_BASEDIR 1
+#  define PTH_SEP "\\"
+#else
+#  define N_BASEDIR 4
+#  define PTH_SEP "/"
+#endif
+
 /* files_add_search_path ()
  * Add a the search path "pth". the path is relative to installation directory.
  * for exemple let's say that your program has a directory named data. the full

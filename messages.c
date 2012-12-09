@@ -84,7 +84,7 @@ void messages_tell (const char* text)
 
 void messages_history (void)
 {
-    toolkit_draw_window ("Message History :");
+    toolkit_draw_window ("Message History :", 0, 0, 0, 0);
     int cur = 0;
 
     while (!Controls.quit

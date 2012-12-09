@@ -3,10 +3,16 @@
 
 #include <SDL/SDL.h>
 
+#define HANDLE_EVENT(evt)\
+    if (event.type == evt)
+
 typedef struct
 {
     /* boolean values that determinate which keys are pressed */
     char kb[SDLK_LAST];
+
+    /* last key pressed */
+    unsigned char last;
 
     /* the x and y coordonates of the mouse */
     int mousex;

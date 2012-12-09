@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "files.h"
+
 /* Private definitions ********************************************************/
 
 typedef struct spath_struct
@@ -14,14 +16,6 @@ typedef struct spath_struct
     const char* str;
     struct spath_struct* nxt;
 } SPATH;
-
-#ifdef WIN32
-#  define N_BASEDIR 1
-#  define PTH_SEP "\\"
-#else
-#  define N_BASEDIR 4
-#  define PTH_SEP "/"
-#endif
 
 /* Private data ***************************************************************/
 

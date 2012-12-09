@@ -218,7 +218,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1354760558 c:\code\mythsnlegends\gfx_event_loop.h
+1354984613 c:\code\mythsnlegends\gfx_event_loop.h
 	<SDL/SDL.h>
 
 1354937604 c:\code\mythsnlegends\gfx_tile.h
@@ -229,7 +229,7 @@
 
 1354843724 c:\code\mythsnlegends\gfx_text.h
 
-1354761209 source:c:\code\mythsnlegends\gfx_event_loop.c
+1354984867 source:c:\code\mythsnlegends\gfx_event_loop.c
 	"gfx_event_loop.h"
 	<SDL/SDL.h>
 	"gfx.h"
@@ -262,7 +262,7 @@
 
 1353813533 c:\code\mythsnlegends\monster_edit.h
 
-1354838845 source:c:\code\mythsnlegends\toolkit_monster_edit.c
+1354968260 source:c:\code\mythsnlegends\toolkit_monster_edit.c
 	"gfx.h"
 	"toolkit.h"
 
@@ -288,15 +288,16 @@
 1354898081 source:c:\code\mythsnlegends\char_skills.c
 	"char.h"
 
-1354760558 source:c:\code\mythsnlegends\files.c
+1354985519 source:c:\code\mythsnlegends\files.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
+	"files.h"
 
 1353992627 source:c:\code\mythsnlegends\item_stock.c
 	"item.h"
 
-1354760558 c:\code\mythsnlegends\files.h
+1354985487 c:\code\mythsnlegends\files.h
 
 1354760558 c:\code\mythsnlegends\char_spells.h
 	"char.h"
@@ -308,11 +309,12 @@
 	"menus.h"
 	"messages.h"
 
-1354945697 c:\code\mythsnlegends\menus.h
+1355045600 c:\code\mythsnlegends\menus.h
 
-1354942631 source:c:\code\mythsnlegends\menus.c
+1355047843 source:c:\code\mythsnlegends\menus.c
+	<string.h>
 	"gfx.h"
-	"toolkit_monster_edit.h"
+	"toolkit.h"
 	"game.h"
 	"menus.h"
 	"messages.h"
@@ -320,7 +322,7 @@
 
 1354836732 c:\code\mythsnlegends\game.h
 
-1354898212 source:c:\code\mythsnlegends\messages.c
+1354968103 source:c:\code\mythsnlegends\messages.c
 	<stdlib.h>
 	<string.h>
 	"gfx.h"
@@ -329,10 +331,14 @@
 
 1354843880 c:\code\mythsnlegends\messages.h
 
-1354839060 source:c:\code\mythsnlegends\toolkit.c
+1355047973 source:c:\code\mythsnlegends\toolkit.c
 	"gfx.h"
+	"menus.h"
+	"toolkit.h"
 
-1354838980 c:\code\mythsnlegends\toolkit.h
+1354968084 c:\code\mythsnlegends\toolkit.h
+	"toolkit_monster_edit.h"
+	"toolkit_tileset_edit.h"
 
 1354949891 source:c:\code\mythsnlegends\map_block.c
 	<stdlib.h>
@@ -344,6 +350,215 @@
 	"map.h"
 	"gfx.h"
 
-1354952301 c:\code\mythsnlegends\map.h
+1355046411 c:\code\mythsnlegends\map.h
+	<SDL.h>
 	"map_block.h"
+
+1354962255 source:c:\code\mythsnlegends\toolkit_tileset_editor.c
+	<stdlib.h>
+	"gfx.h"
+	"toolkit.h"
+	"menus.h"
+	"game.h"
+
+1354965863 c:\code\mythsnlegends\toolkit_tileset_edit.h
+
+1355047902 source:c:\code\mythsnlegends\toolkit_tileset_edit.c
+	<stdlib.h>
+	"gfx.h"
+	"toolkit.h"
+	"menus.h"
+	"game.h"
+	"files.h"
+	"messages.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1326110987 c:\code\sdl-1.2.15\include\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_platform.h
+
+1326110994 c:\code\sdl-1.2.15\include\sdl_config_win32.h
+	"SDL_platform.h"
+
+1326111000 c:\code\sdl-1.2.15\include\begin_code.h
+
+1325738639 c:\code\sdl-1.2.15\include\close_code.h
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_keysym.h
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\code\sdl-1.2.15\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
 

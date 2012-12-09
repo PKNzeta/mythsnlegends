@@ -13,7 +13,7 @@ static void toolkit__monster_editor_loop (void)
         if (Controls.kb[SDLK_f])
         {
             gfx_window_toggle_fullscreen ();
-            toolkit_draw_window ("Monster Editor");
+            toolkit_draw_window ("Monster Editor", 0, 0, 0, 0);
         }
 
         gfx_update_screen ();
@@ -25,6 +25,6 @@ static void toolkit__monster_editor_loop (void)
 void toolkit_monster_editor (void)
 {
     SDL_FillRect (Gfx.screen, NULL, 0x000000);
-    toolkit_draw_window ("Monster Editor");
+    toolkit_draw_window ("Monster Editor", 0, 0, 0, 0);
     toolkit__monster_editor_loop ();
 }

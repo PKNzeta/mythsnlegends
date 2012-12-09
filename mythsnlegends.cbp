@@ -146,6 +146,10 @@
 		<Unit filename="toolkit_monster_edit.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="toolkit_tileset_edit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="toolkit_tileset_edit.h" />
 		<Unit filename="util.h">
 			<Option target="Debug" />
 		</Unit>
