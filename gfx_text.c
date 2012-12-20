@@ -3,7 +3,7 @@
 #define GFX_TXT_OFFSET 0
 
 void gfx_text_write
-    (const char* text, int x, int y, int select)
+    (const char* text, int x, int y, int select, int alpha)
 {
     int xx = x;
     unsigned char* txt_ptr = (unsigned char*) text;
@@ -17,7 +17,8 @@ void gfx_text_write
 
         if (select)
         {
-            gfx_tileset_draw_tile_transparent (&Gfx.tiles_ascii, 219, x, y);
+            gfx_tileset_draw_tile
+                (&Gfx.tiles_ascii.tile[219], Gfx.screen, x, y, 16);
         }
 
         if (*txt_ptr == ' ')
@@ -26,13 +27,16 @@ void gfx_text_write
         }
         else if (*txt_ptr == '#')
         {
-            gfx_tileset_draw_tile (&Gfx.tiles_ascii, rand () % 256, x, y);
+            gfx_tileset_draw_tile
+                (&Gfx.tiles_ascii.tile[rand () % 256],
+                 Gfx.screen, x, y, rand () % 256);
             x += Gfx.tiles_ascii.size; txt_ptr++;
         }
         else
         {
             gfx_tileset_draw_tile
-                (&Gfx.tiles_ascii, *txt_ptr + GFX_TXT_OFFSET, x, y);
+                (&Gfx.tiles_ascii.tile[*txt_ptr + GFX_TXT_OFFSET],
+                 Gfx.screen, x, y, alpha);
             x += Gfx.tiles_ascii.size; txt_ptr++;
         }
     }

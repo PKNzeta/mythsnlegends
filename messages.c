@@ -30,7 +30,7 @@ static void messages__draw_history (const int cur)
     i = 0;
     while (i < 255 && msg != NULL)
     {
-        gfx_text_write (msg->line, 16, (GFX_WIN_Y_SIZE - 24) - (8 * i), 0);
+        gfx_text_write (msg->line, 16, (GFX_WIN_Y_SIZE - 24) - (8 * i), 0, 256);
         msg = msg->nxt;
         i++;
     }
@@ -70,12 +70,13 @@ void messages_tell (const char* text)
     int i = 0;
     MESSAGE* msg = NULL;
 
-    messages__add_line (text);
+    if (text != NULL)
+        messages__add_line (text);
     msg = messages;
 
-    while (i < 3 && msg != NULL)
+    while (i < 5 && msg != NULL)
     {
-        gfx_text_write (msg->line, 0, 16 - (8 * i), 0);
+        gfx_text_write (msg->line, 0, (8 * i), 0, 255 - (i * 46));
         msg = msg->nxt;
         i++;
     }

@@ -2,30 +2,22 @@
 #include "map_block.h"
 #include "gfx.h"
 
-/* very temporary imple */
 
-
-void map_block_draw (MAP_BLOCK* blk, int x, int y)
+void map_block_draw (MAP_BLOCK* blk, int x, int y, void* surf)
 {
-    if (blk->draw_func == NULL)
-    {
-        gfx_tileset_draw_tile (&Gfx.tiles32, blk->tile_num, x, y);
-    }
-    else
-    {
-        blk->draw_func (blk, x, y);
-    }
+    SDL_Rect r = {x * 32, y * 32, 32, 32};
+    SDL_BlitSurface (blk->tile->bitmap, NULL, (SDL_Surface*) surf, &r);
 }
 
 
-/* temporary, it has to be loaded from file, and not hardcoded */
+/* temporary, normaly, it has to be loaded from file, and not hardcoded */
 MAP_BLOCK block_dirt =
 {
-    { 0, 0, 0,
-      0, 0, 0,
-      0, 0, 0 },
+    0, 0,
 
-    9, 3,
+    0,
+
+    NULL,
 
     {NULL},
 

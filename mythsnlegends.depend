@@ -14,7 +14,8 @@
 
 1353351785 c:\code\mythsnlegends\char_stat.h
 
-1354942549 c:\code\mythsnlegends\map_block.h
+1356002756 c:\code\mythsnlegends\map_block.h
+	"gfx.h"
 	"item.h"
 
 1354934917 source:c:\code\mythsnlegends\gfx.c
@@ -221,23 +222,24 @@
 1354984613 c:\code\mythsnlegends\gfx_event_loop.h
 	<SDL/SDL.h>
 
-1354937604 c:\code\mythsnlegends\gfx_tile.h
+1355100202 c:\code\mythsnlegends\gfx_tile.h
 	<SDL/SDL.h>
 
 1354760558 c:\code\mythsnlegends\gfx_window.h
 	<SDL/SDL.h>
 
-1354843724 c:\code\mythsnlegends\gfx_text.h
+1355093811 c:\code\mythsnlegends\gfx_text.h
 
-1354984867 source:c:\code\mythsnlegends\gfx_event_loop.c
+1355093871 source:c:\code\mythsnlegends\gfx_event_loop.c
 	"gfx_event_loop.h"
 	<SDL/SDL.h>
 	"gfx.h"
+	"messages.h"
 
-1354935010 source:c:\code\mythsnlegends\gfx_text.c
+1355100224 source:c:\code\mythsnlegends\gfx_text.c
 	"gfx.h"
 
-1354934227 source:c:\code\mythsnlegends\gfx_tile.c
+1355203812 source:c:\code\mythsnlegends\gfx_tile.c
 	"gfx.h"
 	<SDL/SDL.h>
 
@@ -311,7 +313,7 @@
 
 1355045600 c:\code\mythsnlegends\menus.h
 
-1355047843 source:c:\code\mythsnlegends\menus.c
+1355203424 source:c:\code\mythsnlegends\menus.c
 	<string.h>
 	"gfx.h"
 	"toolkit.h"
@@ -322,7 +324,7 @@
 
 1354836732 c:\code\mythsnlegends\game.h
 
-1354968103 source:c:\code\mythsnlegends\messages.c
+1355097688 source:c:\code\mythsnlegends\messages.c
 	<stdlib.h>
 	<string.h>
 	"gfx.h"
@@ -331,7 +333,7 @@
 
 1354843880 c:\code\mythsnlegends\messages.h
 
-1355047973 source:c:\code\mythsnlegends\toolkit.c
+1355100528 source:c:\code\mythsnlegends\toolkit.c
 	"gfx.h"
 	"menus.h"
 	"toolkit.h"
@@ -340,19 +342,19 @@
 	"toolkit_monster_edit.h"
 	"toolkit_tileset_edit.h"
 
-1354949891 source:c:\code\mythsnlegends\map_block.c
+1356002741 source:c:\code\mythsnlegends\map_block.c
 	<stdlib.h>
 	"map_block.h"
 	"gfx.h"
 
-1354952291 source:c:\code\mythsnlegends\map.c
+1355559248 source:c:\code\mythsnlegends\map.c
 	<stdlib.h>
 	"map.h"
 	"gfx.h"
 
-1355046411 c:\code\mythsnlegends\map.h
-	<SDL.h>
+1356003210 c:\code\mythsnlegends\map.h
 	"map_block.h"
+	"char.h"
 
 1354962255 source:c:\code\mythsnlegends\toolkit_tileset_editor.c
 	<stdlib.h>
@@ -363,7 +365,7 @@
 
 1354965863 c:\code\mythsnlegends\toolkit_tileset_edit.h
 
-1355047902 source:c:\code\mythsnlegends\toolkit_tileset_edit.c
+1355096715 source:c:\code\mythsnlegends\toolkit_tileset_edit.c
 	<stdlib.h>
 	"gfx.h"
 	"toolkit.h"

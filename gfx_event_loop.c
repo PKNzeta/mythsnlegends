@@ -2,6 +2,7 @@
 #include <SDL/SDL.h>
 
 #include "gfx.h"
+#include "messages.h"
 
 gfx_events Controls;
 
@@ -50,7 +51,7 @@ void gfx_eventloop_textpause
     (void)
 {
     Controls.kb[SDLK_p] = 0;
-    gfx_text_write ("Press 'p' again to remove pause. ", 8, 8, 0);
+    messages_tell ("Press 'p' again to remove pause. ");
     SDL_Flip (Gfx.screen);
 
     while(!Controls.quit && !Controls.kb[SDLK_p])

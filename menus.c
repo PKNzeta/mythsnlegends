@@ -14,7 +14,7 @@ MENU option_menu =
         {"        SDK                 \x10 ", toolkit_main},
         {"        Save Options          ", dbg_dummy},
         MENU_SEPARATOR,
-        {"      \x11 Back                  ", NULL}
+        {"     \x11 Back                   ", NULL}
     },
     MENU_POSITION_CENTER(5)
 };
@@ -22,7 +22,7 @@ MENU option_menu =
 MENU main_menu =
 {
     {
-        {"        Start New Game        ", dbg_dummy},
+        {"        Start New Game        ", dbg_map},
         {"        Load Game             ", dbg_dummy},
         {"        Options             \x10 ", game_options},
         MENU_SEPARATOR,
@@ -40,19 +40,19 @@ static void menu__draw_frame (MENU* menu)
     gfx_text_write
         ("\xda\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4"
          "\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xbf",
-         menu->x - size, menu->y - size, 0);
+         menu->x - size, menu->y - size, 0, 255);
 
     while (i < menu->i)
     {
         gfx_text_write ("\xb3                              \xb3",
-                         menu->x - size, menu->y + (i * size), 0);
+                         menu->x - size, menu->y + (i * size), 0, 255);
         i++;
     }
 
     gfx_text_write
         ("\xc0\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4"
          "\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xc4\xd9",
-         menu->x - size, menu->y + (i * size), 0);
+         menu->x - size, menu->y + (i * size), 0, 255);
 }
 
 
@@ -82,12 +82,12 @@ static void menu__draw_menu (MENU* menu, int cur)
         if (i == cur)
         {
             gfx_text_write
-                    (menu->menu[i].txt, menu->x, menu->y + (i * size), 1);
+                    (menu->menu[i].txt, menu->x, menu->y + (i * size), 1, 255);
         }
         else
         {
             gfx_text_write
-                    (menu->menu[i].txt, menu->x, menu->y + (i * size), 0);
+                    (menu->menu[i].txt, menu->x, menu->y + (i * size), 0, 255);
         }
     } while (i++ < menu->i);
 }
@@ -139,8 +139,9 @@ void menu_get_string (char* str, int len, int x, int y)
         (str_cur < str)? str_cur++ :0;
 
         SDL_FillRect (Gfx.screen, &r, 0x000000);
-        gfx_text_write (str, x + 4, y + 4, 0);
-        gfx_text_write ("\x16", x + ((str_cur - str) * 8) + 4, y + 4, 1);
+
+        gfx_text_write (str, x + 4, y + 4, 0, 255);
+        gfx_text_write ("\x16", x + ((str_cur - str) * 8) + 4, y + 4, 1, 64);
     }
 }
 

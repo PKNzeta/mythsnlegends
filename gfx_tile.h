@@ -10,7 +10,6 @@
 typedef struct tile_struct
 {
     SDL_Surface* bitmap;
-    SDL_Surface* bitmap_transparent;
 } TILE;
 
 /** A structure to store information relative to a loaded tileset file */
@@ -41,9 +40,7 @@ Uint8 gfx_tileset_init
  * @param x : where to draw on the X axis
  * @param y : where to draw on the Y axis */
 void gfx_tileset_draw_tile
-    (GFX_TILESET* t, const Uint16 tile_num, const Sint16 x, const Sint16 y);
-void gfx_tileset_draw_tile_transparent
-    (GFX_TILESET* t, const Uint16 tile_num, const Sint16 x, const Sint16 y);
+    (TILE* t, SDL_Surface* surf, const Sint16 x, const Sint16 y, int alpha);
 
 /** Free ressources allocated for the tileset t
  * @param t : a pointer to the tileset to free

@@ -25,7 +25,7 @@ MENU tileset_editor_main_menu =
         {"        Open Directory        ", toolkit_tileset_open_dir},
         {"        Open Tileset          ", dbg_dummy},//toolkit_tileset_open},
         MENU_SEPARATOR,
-        {"      \x11 Back                  ", NULL}
+        {"     \x11 Back                   ", NULL}
     },
     MENU_POSITION_CENTER(4)
 };
