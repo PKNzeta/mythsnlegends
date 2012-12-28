@@ -6,12 +6,17 @@
 
 typedef struct map_block
 {
-    /* coordonate of the block */
-    int x;
-    int y;
+    /* coordonates of the block */
+    int x; int y;
 
     /* the block is walkable or not */
     int walkable;
+
+    /* the block has been revealed or not */
+    int fow;
+
+    /* the block is lighten or not */
+    int light;
 
     /* the block graphics */
     TILE* tile;
@@ -28,12 +33,12 @@ typedef struct map_block
     /* pathfinder token */
     int pth_token;
 
-    /* the function used to drawthe block */
+    /* the function used to draw the block */
     void (*draw_func) (struct map_block*, int, int, SDL_Surface*);
 
 } MAP_BLOCK;
 
-MAP_BLOCK block_dirt;
+MAP_BLOCK block_dirt; //temp
 
 void map_block_draw (MAP_BLOCK* blk, int x, int y, void* surf);
 

@@ -26,20 +26,36 @@ map__each_blocks
     }
 }
 
+static void
+map__create_empty_bitmaps (MAP* m)
+{
+    int i;
+
+    for (i = 0; i < 3; i++)
+    {
+        m->bmp[i] = SDL_CreateRGBSurface
+              (SDL_SWSURFACE, MAX_MAP_X * 32, MAX_MAP_Y * 32, 32, 0, 0, 0, 0);
+        SDL_SetColorKey (m->bmp[i], SDL_SRCCOLORKEY,
+                         SDL_MapRGB (m->bmp[i]->format, 255, 0, 255));
+        SDL_FillRect (m->bmp[i], NULL, 0xff00ff);
+    }
+}
 
 void
 map_draw (MAP* m, int x, int y)
 {
     if (m->bmp_need_refresh)
     {
-        SDL_FillRect (m->bmp, NULL, 0x000000);
-        map__each_blocks (m, map_block_draw, (void*) m->bmp);
+        SDL_FillRect (m->bmp[0], NULL, 0xff00ff);
+        map__each_blocks (m, map_block_draw, (void*) m->bmp); // TODO
         m->bmp_need_refresh = 0;
     }
     SDL_Rect src = {((x-9) * 32), ((y-6) * 32), N_BLK_X * 32, N_BLK_Y * 32};
     SDL_Rect dst = {16, 32, N_BLK_X * 32, N_BLK_Y * 32};
 
-    SDL_BlitSurface (m->bmp, &src, Gfx.screen, &dst);
+    SDL_BlitSurface (m->bmp[0], &src, Gfx.screen, &dst);
+    SDL_BlitSurface (m->bmp[1], &src, Gfx.screen, &dst);
+    SDL_BlitSurface (m->bmp[2], &src, Gfx.screen, &dst);
 }
 
 
@@ -60,8 +76,7 @@ map_create_new_with_dirt (MAP* map)
     MAP* m = malloc (sizeof (MAP));
 
     map__each_blocks (m, tmp_map__create_block, NULL);
-    m->bmp = SDL_CreateRGBSurface
-              (SDL_SWSURFACE, MAX_MAP_X * 32, MAX_MAP_Y * 32, 32, 0, 0, 0, 0);
+    map__create_empty_bitmaps (m);
     m->bmp_need_refresh = 1;
     m->nxt = map;
     map = m;
@@ -79,10 +94,11 @@ dbg_map (void)
     {
         SDL_FillRect (Gfx.screen, NULL, 0x000000);
         map_draw (m,0,0);// rand () % 100, rand () % 100);
-        gfx_tileset_draw_tile (&Gfx.tiles_ascii.tile[38], Gfx.screen,
+        gfx_tileset_draw_tile (&Gfx.tiles_ascii.tile['@'], Gfx.screen,
                            (GFX_WIN_X_SIZE/2) - 4,
                            (GFX_WIN_Y_SIZE/2) - 4,
                            255);
         gfx_update_screen ();
     }
+    Controls.kb[SDLK_ESCAPE] = 0;
 }

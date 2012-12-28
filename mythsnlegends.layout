@@ -50,7 +50,7 @@
 		<Cursor position="269" topLine="0" />
 	</File>
 	<File name="gfx_tile.c" open="0" top="0" tabpos="7">
-		<Cursor position="1648" topLine="39" />
+		<Cursor position="323" topLine="0" />
 	</File>
 	<File name="gfx_tile.h" open="0" top="0" tabpos="4">
 		<Cursor position="1147" topLine="23" />
@@ -77,16 +77,16 @@
 		<Cursor position="261" topLine="0" />
 	</File>
 	<File name="map.c" open="0" top="0" tabpos="1">
-		<Cursor position="987" topLine="29" />
+		<Cursor position="1732" topLine="40" />
 	</File>
 	<File name="map.h" open="0" top="0" tabpos="2">
-		<Cursor position="556" topLine="4" />
+		<Cursor position="459" topLine="4" />
 	</File>
 	<File name="map_block.c" open="0" top="0" tabpos="3">
-		<Cursor position="252" topLine="0" />
+		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="map_block.h" open="0" top="0" tabpos="4">
-		<Cursor position="735" topLine="11" />
+		<Cursor position="915" topLine="6" />
 	</File>
 	<File name="menus.c" open="0" top="0" tabpos="5">
 		<Cursor position="567" topLine="10" />

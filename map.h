@@ -15,7 +15,9 @@ typedef struct map_struct
     /* character present in this map */
     CHARACTER mobs[128];
 
-    SDL_Surface* bmp;
+    /* graphics layers */
+    /* the first layer is actualised only if bmp_need_refresh is set */
+    SDL_Surface* bmp[3];
     int          bmp_need_refresh;
 
     /* this is for special places or buildings */
